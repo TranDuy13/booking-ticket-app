@@ -31,11 +31,26 @@ public class DiscountEntity {
 	private Date DayOfEnd;
 	private int NumOfDiscount;
 	
+	public DiscountEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@OneToMany (mappedBy = "discount", fetch = FetchType.EAGER)
 	private Collection<TicketEntity> ticket;
 
 	public String getDiscountid() {
 		return discountid;
+	}
+
+	public DiscountEntity(String discountid, Date dayOfStart, Date dayOfEnd, int numOfDiscount,
+			Collection<TicketEntity> ticket) {
+		super();
+		this.discountid = discountid;
+		DayOfStart = dayOfStart;
+		DayOfEnd = dayOfEnd;
+		NumOfDiscount = numOfDiscount;
+		this.ticket = ticket;
 	}
 
 	public void setDiscountid(String discountid) {

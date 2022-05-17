@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import ptithcm.entity.AdminEntity;
+import ptithcm.entity.PlaneEntity;
 @Controller
 @RequestMapping("/admin/")
 @Transactional
@@ -27,16 +28,21 @@ public class AdminController {
 	@Autowired
 	SessionFactory factory;
 	@RequestMapping("index")
-
 	public String index(ModelMap model) {
 		if(LoginController.admin.getUsername()==null) {
 			return "login/login";
 		}
 		Session session = factory.getCurrentSession();
-		String hql = "FROM AdminEntity";
+		String hql="from AdminEntity A where A.username="+"'"+LoginController.admin.getUsername()+"'";
+		String planehql="from PlaneEntity";
+		Query plane =session.createQuery(planehql);
 		Query query = session.createQuery(hql);
 		List<AdminEntity> list = query.list();
+		List<PlaneEntity> planelist= plane.list();
 		model.addAttribute("staffs", list);
+		model.addAttribute("plane", planelist);
 		return "admin/index";
 	}
+	
+	
 }

@@ -29,6 +29,9 @@ public class LoginController {
 
 	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String showForm() {
+		if(LoginController.admin.getUsername()!=null) {
+			return "redirect:index.htm";
+		}
 		return "login/login";
 	}
 

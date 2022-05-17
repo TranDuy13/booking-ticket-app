@@ -1,10 +1,13 @@
 package ptithcm.entity;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -21,7 +24,7 @@ public class PlaneEntity {
 	private String airport;
 	private String airline;
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern = "dd-M-yyyy hh:mm:ss")
+	@DateTimeFormat(pattern = "dd/MM/yyyy hh:mm:ss")
 	private Date flighttime;
 
 	public String getIdplane() {
@@ -33,8 +36,31 @@ public class PlaneEntity {
 	public String getDestination() {
 		return destination;
 	}
+	@OneToMany (mappedBy = "plane", fetch = FetchType.EAGER)
+	private Collection<TicketEntity> ticket;
 	public void setDestination(String destination) {
 		this.destination = destination;
+	}
+	public PlaneEntity(String idplane, String destination, String departFrom, String airport, String airline,
+			Date flighttime, Collection<TicketEntity> ticket) {
+		super();
+		this.idplane = idplane;
+		this.destination = destination;
+		this.departFrom = departFrom;
+		this.airport = airport;
+		this.airline = airline;
+		this.flighttime = flighttime;
+		this.ticket = ticket;
+	}
+	public PlaneEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Collection<TicketEntity> getTicket() {
+		return ticket;
+	}
+	public void setTicket(Collection<TicketEntity> ticket) {
+		this.ticket = ticket;
 	}
 	public String getDepartFrom() {
 		return departFrom;

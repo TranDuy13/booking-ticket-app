@@ -1,4 +1,4 @@
-	package ptithcm.entity;
+package ptithcm.entity;
 
 import java.util.Collection;
 import java.util.Date;
@@ -19,7 +19,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name ="ADMIN")
 public class AdminEntity {
 	@Id
-	@GeneratedValue
 	@Column(name="username")
 	private String username;
 	@Column(name="password")
