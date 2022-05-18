@@ -11,13 +11,3 @@ var SuvMenu = document.querySelector(".user_info--user");
         }
     };
 
-var Add = document.querySelector(".btn_add_tour");
-    openAdd = document.querySelector(".modal");
-    closeAdd = document.querySelector(".modal__overlay")
-    
-Add.onclick = function(){
-        openAdd.style.display = "block";
-    };
-closeAdd.onclick = function() {
-        openAdd.style.display = "none";
-    }

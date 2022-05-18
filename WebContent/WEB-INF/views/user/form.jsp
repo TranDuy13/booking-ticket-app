@@ -15,14 +15,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form:form  action="user/form.htm" modelAttribute="user" method="post">
+<form:form  action="admin/form.htm" modelAttribute="user" method="post">
 	<div>
 		<label>Username</label>
-		<form:input path="username" readonly="${btnupdate ? true : false }"/>
+		<form:input path="idplane" readonly="${btnupdate ? true : false }"/>
 		<label>Password</label>
-		<form:input path="password"/>
+		<form:input path="flighttime"/>
 		<label>Fullname</label>
-		<form:input path="fullname"/>
+		<form:input path="destination"/>
 	
 		<button class="btn btn-primary" type = "submit" name= "${btnupdate ? 'btnupdate' : 'Insert'}" >${btnupdate ? 'Update' : 'Insert'}</button>
 	</div>

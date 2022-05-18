@@ -47,7 +47,7 @@
                             <div class="img">
                                 <i class="fas fa-user"></i>
                                 </div>
-                                <a href="http://localhost:8080/PTITHCM/">
+                                <a href="http:	/localhost:8080/PTITHCM/">
                                 	<span>Admin</span>
                                 </a>
                         </li>
@@ -71,10 +71,12 @@
                         </a>
                     </ul>
             </div>
-            	<h2>${message}</h2>
                 <div class="container">
                     <div class="best_offer data">
-                        <button class="btn_add_tour">ADD</button>
+                    <a href="admin/form.htm">
+                   		 <button class="btn_add_tour">ADD</button>
+                    </a>
+                        
                         <table>
                             <tr>
                                 <th>ID PLANE</th>
@@ -93,10 +95,11 @@
                                 <td>${a.airport}</td>
                                 <td>${a.airline }</td>
                                 <td>${a.flighttime}</td>
-                                <td><a href="#" className="delete_tour">Delete</a></td>
-                                <td><a href="#" className="edit_tour">Edit</a></td>
+                                <td><a href="admin/index/${a.idplane}.htm?linkDelete" class="delete_tour">Delete</a></td>
+                                <td><a href="admin/update/${a.idplane }.htm?linkEdit" class="edit_tour">Edit</a></td>
                             </tr>
                           </c:forEach>
+                          </table>
                     </div>
                 </div>
         </div>
@@ -114,41 +117,8 @@
 	                    <span>Register</span>
 	                </div> -->
 		
-	               <form  action="admin/plane.htm" modelAttribute="plane" method="post">
-	                <div class="modal__form">
-	                    <div class="modal__form__group">
-	                        <p>FROM</p>
-	                        <input type="text" class="modal__form__input" path="departFrom" placeholder="TP HCM - SGN">
-	                    </div>
-	                    <div class="modal__form__group">
-	                        <p>TO</p>
-	                        <input type="text" class="modal__form__input" path="destination" placeholder="DA NANG - DND">
-	                    </div>
-	                    <div class="modal__form__group">
-	                        <p>CALSSIC</p>
-	                        <input path="airport" type="text" class="modal__form__input" placeholder="VNA">
-	                    </div>
-	                    <div class="modal__form__group">
-	                        <p>san bay</p>
-	                        <input path="airline" type="text" class="modal__form__input">
-	                    </div>
-	                    	                    <div class="modal__form__group">
-	                        <p>ma san bay</p>
-	                        <input path="idplane" type="text" class="modal__form__input">
-	                    </div>
-	                    <div class="modal__form__group">
-	                        <p>DATE</p>
-	                        <input path="flighttime" type="text" class="modal__form__input">
-	                    </div>
-	                </div>
-	                        <div class="modal__form__controls">
-	                    <button type="submit" class="btn-login">ADD</button>
-	                </div>
-	                </form>
-	
-	        
-	
-	            
+	         
+	    
 	            </div>
 
 	        </div>

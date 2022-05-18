@@ -12,15 +12,15 @@
 <form:form action="insert.htm" modelAttribute="user">
       <div>
             <label>Username</label>
-            <form:input path="username"/>
+            <form:input path="idplane"/>
       </div>
       <div>
            <label> Password</label>
-            <form:input path="password"/>
+            <form:input path="flighttime"/>
       </div>
       <div>
             <label> Fullname</label>
-            <form:input path= "fullname"/>
+            <form:input path= "destination"/>
       </div>
       <div>
             <button class="btn btn-default">Insert</button>

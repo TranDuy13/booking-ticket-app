@@ -1,10 +1,7 @@
 package ptithcm.controller;
 
-import java.util.Date;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
+import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -17,144 +14,109 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 import ptithcm.entity.PlaneEntity;
 
 
 @Transactional
 @Controller
 @RequestMapping("/admin/")
-public class PlaneController {
-	@Autowired
-	SessionFactory factory;
-	
-	@RequestMapping(value = "plane", method = RequestMethod.POST)
-	public String insert(HttpServletRequest request, ModelMap model, @ModelAttribute("plane") PlaneEntity plane) {
-		Integer temp = this.insertPlane(plane);
-		if(temp != 0) {
-			model.addAttribute("message","Thêm mới thành công");
-			plane.setAirline(null);
-			plane.setAirport(null);
-			plane.setDepartFrom(null);
-			plane.setDestination(null);
-			plane.setFlighttime(null);
-			plane.setIdplane(null);
-		}else {
-			model.addAttribute("message","Thêm mới thất bại");
-		}
-		List<PlaneEntity> planes = this.getPlanes();
-		model.addAttribute("plane", planes);
-		return "admin/index";
-	}
-	
-	public Integer insertPlane(PlaneEntity plane) {
-		Session session = factory.openSession();
-		Transaction t = session.beginTransaction();
-		try {
-			session.save(plane);
-			t.commit();			
-		}
-		catch (Exception e) {
-			t.rollback();
-			return 0;			
-		}
-		finally {
-			session.close();
-		}
-		return 1;
-	}
-	
-	@RequestMapping(value = "plane/{idplane}.htm", params = "linkDelete")
-	public String deleteRecord (HttpServletRequest request, ModelMap model, @ModelAttribute("plane") PlaneEntity plane,
+public class PlaneController{
+      @Autowired
+      SessionFactory factory;
+       
+      @RequestMapping(value="form", method=RequestMethod.GET)
+      public String form(ModelMap model){
+            model.addAttribute("planes", new PlaneEntity());
+            return "plane/form";
+      }
+      @RequestMapping(value="form", method=RequestMethod.POST)
+      public String form(ModelMap model, @ModelAttribute("planes") PlaneEntity planes){
+           Session session=factory.openSession();
+           Transaction t= session.beginTransaction();
+ 
+            try{
+                  session.save(planes);
+                  t.commit();
+                  model.addAttribute("message", "Thêm mới thành công !");
+            }
+            catch (Exception e){
+                  t.rollback();
+                  model.addAttribute("message", "Thêm mới thất bại !");
+            }
+           finally{
+                  session.close();
+            }
+            return "redirect:index.htm";
+
+            }
+  	
+	@RequestMapping(value = "index/{idplane}.htm", params = "linkDelete")
+	public String deletePlaneS( ModelMap model, @ModelAttribute("planessss") PlaneEntity planes,
 			@PathVariable("idplane") String idplane) {
-		Integer temp = this.deleteRecord(this.getPlane(idplane));
-		List<PlaneEntity> planes = this.getPlanes();
-		model.addAttribute("planes", planes);	
-		if(temp != 0) {
-			model.addAttribute("message","Delete thành công");
-		}
-		else {
-			model.addAttribute("message", "Delete không thành công");
-		}
-		return "admin/index";
+		this.deletePlane(this.getPlane(idplane),model);
+		List<PlaneEntity> list = this.getPlanes();
+		model.addAttribute("plane", list);
+		System.out.print(this.getPlane(idplane));
+		return"admin/index";
 	}
-	public Integer deleteRecord (PlaneEntity plane) {
+	public void deletePlane (PlaneEntity planes, ModelMap model	) {
 		Session session = factory.openSession();
 		Transaction t = session.beginTransaction();
 		
 		try {
-			session.delete(plane);
+			session.delete(planes);
 			t.commit();
+			model.addAttribute("message","Delete thành công");
 		}
 		catch (Exception e){
+			model.addAttribute("message", "Delete không thành công");
 			t.rollback();
-			return 0;
 		}
 		finally{
 			session.close();
 		}
-		return 1;
 	}
-	
-	public static Date temp_date;
-	public static String temp_id;
-	@RequestMapping(value = "plane/{idplane}", params = "linkEdit" )
-	public String editPlane (HttpServletRequest request, ModelMap model, @ModelAttribute("plane") PlaneEntity plane, 
+	//phan chinh sua
+	@RequestMapping(value = "update/{idplane}", params = "linkEdit" )
+	public String editUser ( ModelMap model, PlaneEntity planes, 
 			@PathVariable("idplane") String idplane) {
-		temp_id = idplane;
-		temp_date = this.getPlane(idplane).getFlighttime();
-		List<PlaneEntity> planes = this.getPlanes();
-		model.addAttribute("planes", planes);
-		model.addAttribute("plane", this.getPlane(idplane));
-		return "admin/index";
+		List<PlaneEntity> list = this.getPlanes();
+		model.addAttribute("plane", list);
+		model.addAttribute("planes", this.getPlane(idplane));
+		return "plane/update";
 	}
 
-	@RequestMapping(value = "plane", params = "btnupdate")
-	public String edit_Record(HttpServletRequest request, ModelMap model, 
-			@ModelAttribute("plane") PlaneEntity plane) {
-		plane.setFlighttime(temp_date);
-		plane.setIdplane(temp_id);
-		Integer temp = this.updatePlane(plane);
-		if( temp != 0) {
-			model.addAttribute("message", "Cập nhật thành công");
-			plane.setAirline(null);
-			plane.setAirport(null);
-			plane.setDepartFrom(null);
-			plane.setDestination(null);
-			plane.setFlighttime(null);
-			plane.setIdplane(null);
-		}
-		else {
-			model.addAttribute("message", "Cập nhật không thành công");
-		}
-		List<PlaneEntity> planes = this.getPlanes();
-		model.addAttribute("planes", planes);
-		return "admin/index";
+	@RequestMapping(value = "update", method = RequestMethod.POST )
+	public String edit_User( ModelMap model, 
+			@ModelAttribute("planess") PlaneEntity planes){
+		this.updateUser(planes,model);
+		return "redirect:index.htm";
 	}
-	
-	public Integer updatePlane(PlaneEntity plane) {
+	 
+	public String updateUser(PlaneEntity planes, ModelMap model) {
 		Session session = factory.openSession();
 		Transaction t = session.beginTransaction();
-		
 		try {
-			session.update(plane);
+			session.update(planes);
 			t.commit();
+			model.addAttribute("message", "Cập nhật thành công");
 		}
 		catch (Exception e) {
+			model.addAttribute("message", "Cập nhật không thành công");
 			t.rollback();
-			return 0;
 		}
 		finally {
 			session.close();
 		}
-		return 1;
+		return "redirect:index.htm";
 	}
 	
-	
-	public PlaneEntity getPlane (String idplane) {
+	public PlaneEntity getPlane (String id) {
 		Session session = factory.getCurrentSession();
-		String hql = "FROM PlaneEntity where idplane =:idplane";
+		String hql = "FROM PlaneEntity where idplane =:id";
 		Query query = session.createQuery(hql);
-		query.setParameter("idplane", idplane);
+		query.setParameter("id", id);
 		PlaneEntity list = (PlaneEntity) query.list().get(0);
 		return list;
 	}
@@ -166,5 +128,5 @@ public class PlaneController {
 		List<PlaneEntity> list = query.list();
 		return list;
 	}
-	
+
 }

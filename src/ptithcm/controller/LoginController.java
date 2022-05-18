@@ -45,7 +45,6 @@ public class LoginController {
 		String hql = "from AdminEntity";
 		Query query = session.createQuery(hql);
 		List<AdminEntity> list = query.list();
-		System.out.print(admin.getUsername());
 		
 		for (AdminEntity AdminEntity : list) {
 			if (AdminEntity.getUsername().equals(admin.getUsername())) {

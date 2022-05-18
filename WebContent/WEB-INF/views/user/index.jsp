@@ -16,7 +16,7 @@ ${message}
 <br>
 
 <br>
-<a href="user/form.htm">
+<a href="admin/form.htm">
 		<button type="button"  class="btn btn-warning">Thêm</button></a>
 <table class="table table-hover">
 	<tr>
@@ -28,19 +28,13 @@ ${message}
 	</tr>
 	<c:forEach var="u" items = "${users}">
 	<tr>
-		<td>${u.username}</td>
-		<td>${u.password}</td>
-		<td>${u.fullname}</td>
+		<td>${u.idplane}</td>
+		<td>${u.flighttime}</td>
+		<td>${u.destination}</td>
 		<td>
-		<a href="user/form/${u.username }.htm?linkEdit">
-		<button type="button"  class="btn btn-warning">Chỉnh xửa</button></a>
-		</td>
-		<td>
-		<a href="user/index/${u.username }.htm?linkDelete">
-		<button type="button"  class="btn btn-warning">xóa</button></a>
-		</td>
 	</tr>
 	</c:forEach>
 </table>
+<div>${message }</div>
 </body>
 </html>
