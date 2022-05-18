@@ -11,15 +11,8 @@ ul.nav_bar--list > li:hover, .nav_bar--menu img:hover{
     margin: 70px 60px 50px 60px;
     padding-right: 40px;
 }
-table{
-    
-    width: 100%;
-}
 
-table, th, td {
-    border: 1px solid black;
-    
-}
+
 th, td {
     padding: 10px;
 }

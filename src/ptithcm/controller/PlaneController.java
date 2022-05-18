@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import ptithcm.entity.AdminEntity;
 import ptithcm.entity.PlaneEntity;
 
 
@@ -52,22 +53,20 @@ public class PlaneController{
             }
   	
 	@RequestMapping(value = "index/{idplane}.htm", params = "linkDelete")
-	public String deletePlaneS( ModelMap model, @ModelAttribute("planessss") PlaneEntity planes,
-			@PathVariable("idplane") String idplane) {
-		this.deletePlane(this.getPlane(idplane),model);
-		List<PlaneEntity> list = this.getPlanes();
-		model.addAttribute("plane", list);
-		System.out.print(this.getPlane(idplane));
-		return"admin/index";
-	}
-	public void deletePlane (PlaneEntity planes, ModelMap model	) {
+	public String deletePlaneS( ModelMap model, PlaneEntity planes, @PathVariable("idplane") String idplane) {
 		Session session = factory.openSession();
 		Transaction t = session.beginTransaction();
-		
 		try {
 			session.delete(planes);
 			t.commit();
+			String hql="from AdminEntity A where A.username="+"'"+LoginController.admin.getUsername()+"'";
+			List<PlaneEntity> list = this.getPlanes();
+			model.addAttribute("plane", list);
+			Query query = session.createQuery(hql);
+			List<AdminEntity> adminlist = query.list();
+			model.addAttribute("staffs", adminlist);
 			model.addAttribute("message","Delete thành công");
+			return "admin/index";
 		}
 		catch (Exception e){
 			model.addAttribute("message", "Delete không thành công");
@@ -75,8 +74,10 @@ public class PlaneController{
 		}
 		finally{
 			session.close();
-		}
+		};
+		return "admin/index";
 	}
+
 	//phan chinh sua
 	@RequestMapping(value = "update/{idplane}", params = "linkEdit" )
 	public String editUser ( ModelMap model, PlaneEntity planes, 
@@ -89,7 +90,7 @@ public class PlaneController{
 
 	@RequestMapping(value = "update", method = RequestMethod.POST )
 	public String edit_User( ModelMap model, 
-			@ModelAttribute("planess") PlaneEntity planes){
+			@ModelAttribute("planes") PlaneEntity planes){
 		this.updateUser(planes,model);
 		return "redirect:index.htm";
 	}

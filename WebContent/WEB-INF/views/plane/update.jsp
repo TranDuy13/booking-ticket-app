@@ -57,7 +57,7 @@
                             <div class="wrapper wrapper--w790">
                                 <div>
                                     <div class="card-body">
-                                        <form:form action="admin/update.htm" modelAttribute="planess" method="post">
+                                        <form:form action="admin/update.htm" modelAttribute="planes" method="post">
                                           
                                             <div class="form-row">
                                                 <div class="name">ID PLANE</div>

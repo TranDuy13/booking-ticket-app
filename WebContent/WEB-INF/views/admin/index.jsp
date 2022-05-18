@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/main.css">
-    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/admin_site.css">
+    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/aaa.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="http://localhost:8080/PTITHCM/fonts/themify-icons/themify-icons.css">
@@ -30,7 +32,7 @@
                     </div>
                 <div class="user--subnav">
                     <ul>
-                        <a href="logout.htm">
+                        <a href="admin/logout.htm">
                             <li> 
                                 LOG OUT
                             </li>
@@ -47,7 +49,7 @@
                             <div class="img">
                                 <i class="fas fa-user"></i>
                                 </div>
-                                <a href="http:	/localhost:8080/PTITHCM/">
+                                <a href="/PTITHCM/">
                                 	<span>Admin</span>
                                 </a>
                         </li>
@@ -76,30 +78,35 @@
                     <a href="admin/form.htm">
                    		 <button class="btn_add_tour">ADD</button>
                     </a>
-                        
-                        <table>
-                            <tr>
-                                <th>ID PLANE</th>
-                                <th>FROM</th>
-                                <th>TO</th>
-                                <th>AIRPORT</th>
-                                <th>AIRLINE</th>
-                                <th>DATE</th>
-                                <th colspan="2">EDIT</th>
-                            </tr>
-                          <c:forEach var = "a" items = "${plane}">
-                            <tr>
-                                <td>${a.idplane}</td>
+                          <table class="table table-hover">
+							  <thead class="thead-light">
+							    <tr>
+							      <th scope="col">ID PLANE</th>
+							      <th scope="col">FROM</th>
+							      <th scope="col">TO</th>
+							      <th scope="col">AIRPORT</th>
+							      <th scope="col">AIRLINE</th>
+							      <th scope="col">DATE</th>
+							      <th scope="col">EDIT</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							   <c:forEach var = "a" items = "${plane}">
+							    <tr>
+                                <th scope="row">${a.idplane}</th>
                                 <td>${a.departFrom}</td>
                                 <td>${a.destination}</td>
                                 <td>${a.airport}</td>
                                 <td>${a.airline }</td>
                                 <td>${a.flighttime}</td>
-                                <td><a href="admin/index/${a.idplane}.htm?linkDelete" class="delete_tour">Delete</a></td>
-                                <td><a href="admin/update/${a.idplane }.htm?linkEdit" class="edit_tour">Edit</a></td>
-                            </tr>
-                          </c:forEach>
-                          </table>
+                                <td>
+                                	<a href="admin/index/${a.idplane}.htm?linkDelete" class="delete_tour">Delete</a>
+                                	<a href="admin/update/${a.idplane }.htm?linkEdit" class="edit_tour">Edit</a>
+                                </td>
+							    </tr>
+							  </c:forEach>
+							  </tbody>
+						</table>
                     </div>
                 </div>
         </div>
