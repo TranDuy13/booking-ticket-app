@@ -39,6 +39,7 @@ public class LoginController {
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String saveData(HttpServletRequest request,HttpServletResponse response, ModelMap model, HttpSession httpsession) throws IOException  {
 		admin.setPassword(request.getParameter("password"));
+		System.out.print(request.getParameter("username"));
 		admin.setUsername(request.getParameter("username"));
 		System.out.print(request.getParameter("username"));
 		Session session = factory.getCurrentSession();

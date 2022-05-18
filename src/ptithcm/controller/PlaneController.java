@@ -1,6 +1,12 @@
 package ptithcm.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
+
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -32,11 +38,15 @@ public class PlaneController{
             return "plane/form";
       }
       @RequestMapping(value="form", method=RequestMethod.POST)
-      public String form(ModelMap model, @ModelAttribute("planes") PlaneEntity planes){
+      public String form(HttpServletRequest request, ModelMap model, @ModelAttribute("planes") PlaneEntity planes) throws Exception{
            Session session=factory.openSession();
-           Transaction t= session.beginTransaction();
- 
+           Transaction t= session.beginTransaction();;
+
+
             try{
+                  String stringDate = String.valueOf(request.getParameter("abc"));
+               	  Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(stringDate);
+            	  planes.setFlighttime(date1);
                   session.save(planes);
                   t.commit();
                   model.addAttribute("message", "Thêm mới thành công !");
@@ -89,16 +99,20 @@ public class PlaneController{
 	}
 
 	@RequestMapping(value = "update", method = RequestMethod.POST )
-	public String edit_User( ModelMap model, 
+	public String edit_User(HttpServletRequest request, ModelMap model, 
 			@ModelAttribute("planes") PlaneEntity planes){
-		this.updateUser(planes,model);
+		this.updateUser(planes, model,request);
 		return "redirect:index.htm";
 	}
 	 
-	public String updateUser(PlaneEntity planes, ModelMap model) {
+	private String updateUser(PlaneEntity planes, ModelMap model, HttpServletRequest request) {
+		// TODO Auto-generated method stub
 		Session session = factory.openSession();
 		Transaction t = session.beginTransaction();
 		try {
+            String stringDate = String.valueOf(request.getParameter("abc"));
+         	Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(stringDate);
+         	planes.setFlighttime(date1);
 			session.update(planes);
 			t.commit();
 			model.addAttribute("message", "Cập nhật thành công");
@@ -112,6 +126,26 @@ public class PlaneController{
 		}
 		return "redirect:index.htm";
 	}
+//	public String updateUser(HttpServletRequest request,PlaneEntity planes, ModelMap model) {
+//		Session session = factory.openSession();
+//		Transaction t = session.beginTransaction();
+//		try {
+//            String stringDate = String.valueOf(request.getParameter("abc"));
+//         	Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(stringDate);
+//         	planes.setFlighttime(date1);
+//			session.update(planes);
+//			t.commit();
+//			model.addAttribute("message", "Cập nhật thành công");
+//		}
+//		catch (Exception e) {
+//			model.addAttribute("message", "Cập nhật không thành công");
+//			t.rollback();
+//		}
+//		finally {
+//			session.close();
+//		}
+//		return "redirect:index.htm";
+//	}
 	
 	public PlaneEntity getPlane (String id) {
 		Session session = factory.getCurrentSession();
@@ -124,7 +158,7 @@ public class PlaneController{
 	
 	public List<PlaneEntity> getPlanes(){
 		Session session = factory.getCurrentSession();
-		String hql = "FROM PlaneEntity";
+		String hql = "FROM PlaneEntity order by flighttime ASC";
 		Query query = session.createQuery(hql);
 		List<PlaneEntity> list = query.list();
 		return list;

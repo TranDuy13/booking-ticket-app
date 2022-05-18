@@ -24,12 +24,21 @@ public class PlaneEntity {
 	@Column (name = "departFrom")
 	private String departFrom;
 	@Column (name = "airport")
-	private String airport;
+	private String airport;	
 	@Column (name = "airline")
 	private String airline;
+	@Column(name="flighttime")
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern = "dd/MM/yyyy hh:mm:ss")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date flighttime;
+	@Column(name="times")
+	private String times;
+	public String getTimes() {
+		return times;
+	}
+	public void setTimes(String times) {
+		this.times = times;
+	}
 	@OneToMany (mappedBy = "plane", fetch = FetchType.EAGER)
 	private Collection<TicketEntity> ticket;
 	public String getIdplane() {

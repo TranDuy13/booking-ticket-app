@@ -8,7 +8,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PreBooking</title>
+        <title>PLANE</title>
         <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/FormBooking.css">
         <link href="http://localhost:8080/PTITHCM/accets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
         <link href="http://localhost:8080/PTITHCM/accets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
@@ -101,13 +101,25 @@
                                                         <form:input class="input--style-5" type="text" path="airline"/>
                                                          <label class="label--desc">AIRLINE</label>
                                                     </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="name">TIME</div>
+                                                <div class="value">
+                                                    <div class="input-group">
+                                                        <form:input class="input--style-5" type="time" path="times"/>
+                                                         <label class="label--desc">TIME</label>
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="name">FLIGHT TIME</div>
                                                 <div class="value">
                                                     <div class="input-group">
-                                                        <form:input class="input--style-5" type="date" path="flighttime"/>
+                                                        <input class="input--style-5" type="date" name="abc">
+                                                     
                                                          <label class="label--desc">FLIGHT TIME</label>
                                                     </div>
                                                 </div>

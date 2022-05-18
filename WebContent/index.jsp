@@ -134,9 +134,8 @@
                                 <p>CLASS</p>
                             </div>
                             <select name="class_flight" id="">
-                                <option>1 Person</option>
-                                <option>2 Person</option>
-                                <option>3 Person</option>
+                                <option>Eco</option>
+                                <option>Business</option>
                             </select>
                             <p>Business</p>
                         </div>
@@ -152,19 +151,9 @@
                             </div>
                             <input type="date" value="2022-03-24">
                         </div>
-                        <div class="select_date">
-                            <div class="places__title">
-                                <div>
-                                    <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-calendar-fill.png" alt="">
-                                </div>
-                                <p>RETURN</p>
-                                <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-Arrow-top.png" alt="">
-                            </div>
-                            <input type="date" value="2022-03-25"> 
-                        </div>
                         
                     </div>
-                    <a href="booking.htm"><button class="btn" type="button">SEARCH FLIGHT</button></a>
+                    <a href="search.htm"><button class="btn" type="button">SEARCH FLIGHT</button></a>
                 </div>
                 <div class="special_offer">
                     <h3 class="special_offer--title">

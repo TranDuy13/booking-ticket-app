@@ -4,6 +4,15 @@
 <html lang="en">
 <head>
  	<base href="${pageContext.servletContext.contextPath}/"> 
+ 	 <style>
+ 		.a12{
+ 			display:flex;
+ 		}
+ 		.a1{
+ 		padding:10px;
+ 		}
+		
+ 	</style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +39,7 @@
                     <div class="arrow arrow2">
                         <img src="http://localhost:8080/PTITHCM/img/user/Icon-Arrow-Down.svg" alt="">
                     </div>
-                <div class="user--subnav">
+                <div class="arrow arrow2">
                     <ul>
                         <a href="admin/logout.htm">
                             <li> 
@@ -81,12 +90,12 @@
                           <table class="table table-hover">
 							  <thead class="thead-light">
 							    <tr>
-							      <th scope="col">ID PLANE</th>
+							      <th scope="col">ID</th>
 							      <th scope="col">FROM</th>
 							      <th scope="col">TO</th>
 							      <th scope="col">AIRPORT</th>
 							      <th scope="col">AIRLINE</th>
-							      <th scope="col">DATE</th>
+							      <th scope="col">FLIGHT TIME</th>
 							      <th scope="col">EDIT</th>
 							    </tr>
 							  </thead>
@@ -98,10 +107,16 @@
                                 <td>${a.destination}</td>
                                 <td>${a.airport}</td>
                                 <td>${a.airline }</td>
-                                <td>${a.flighttime}</td>
-                                <td>
-                                	<a href="admin/index/${a.idplane}.htm?linkDelete" class="delete_tour">Delete</a>
-                                	<a href="admin/update/${a.idplane }.htm?linkEdit" class="edit_tour">Edit</a>
+                                <td>${a.flighttime} ${a.times}</td>
+                                <td class="a12">
+                                	<a class="a1" href="#" class="delete_tour">
+                                		<img src="http://localhost:8080/PTITHCM/img/icon/icon-card/plus-square.svg" alt="">									</a>
+                                	<a class="a1" href="admin/update/${a.idplane }.htm?linkEdit" class="edit_tour">
+										<img src="http://localhost:8080/PTITHCM/img/icon/icon-card/pencil-square.svg" alt="">	
+									</a>
+									<a class="a1" href="admin/index/${a.idplane}.htm?linkDelete" class="edit_tour">
+										<img src="http://localhost:8080/PTITHCM/img/icon/icon-card/x-square.svg" alt="">	
+									</a>
                                 </td>
 							    </tr>
 							  </c:forEach>
