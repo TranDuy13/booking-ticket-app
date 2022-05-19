@@ -79,6 +79,12 @@ public class PlaneController{
 			return "admin/index";
 		}
 		catch (Exception e){
+			String hql="from AdminEntity A where A.username="+"'"+LoginController.admin.getUsername()+"'";
+			List<PlaneEntity> list = this.getPlanes();
+			model.addAttribute("plane", list);
+			Query query = session.createQuery(hql);
+			List<AdminEntity> adminlist = query.list();
+			model.addAttribute("staffs", adminlist);
 			model.addAttribute("message", "Delete không thành công");
 			t.rollback();
 		}
@@ -126,27 +132,7 @@ public class PlaneController{
 		}
 		return "redirect:index.htm";
 	}
-//	public String updateUser(HttpServletRequest request,PlaneEntity planes, ModelMap model) {
-//		Session session = factory.openSession();
-//		Transaction t = session.beginTransaction();
-//		try {
-//            String stringDate = String.valueOf(request.getParameter("abc"));
-//         	Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(stringDate);
-//         	planes.setFlighttime(date1);
-//			session.update(planes);
-//			t.commit();
-//			model.addAttribute("message", "Cập nhật thành công");
-//		}
-//		catch (Exception e) {
-//			model.addAttribute("message", "Cập nhật không thành công");
-//			t.rollback();
-//		}
-//		finally {
-//			session.close();
-//		}
-//		return "redirect:index.htm";
-//	}
-	
+
 	public PlaneEntity getPlane (String id) {
 		Session session = factory.getCurrentSession();
 		String hql = "FROM PlaneEntity where idplane =:id";

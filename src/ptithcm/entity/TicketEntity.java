@@ -17,6 +17,13 @@ public class TicketEntity{
     private Boolean typeticket;
     private Boolean stt;
     private int prices;
+    private int discount;
+	public int getDiscount() {
+		return discount;
+	}
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
 	@OneToOne(mappedBy="ticket")
 	public String getIdticket() {
 		return idticket;
@@ -34,29 +41,10 @@ public class TicketEntity{
 		this.prices = prices;
 	}
 	@ManyToOne
-	@JoinColumn(name="discountid")
-	private DiscountEntity discount;
-	public DiscountEntity getDiscount() {
-		return discount;
-	}
-	public void setDiscount(DiscountEntity discount) {
-		this.discount = discount;
-	}
-	@ManyToOne
 	@JoinColumn(name="idplane")
 	private PlaneEntity plane;
 	public PlaneEntity getPlane() {
 		return plane;
-	}
-	public TicketEntity(String idticket, Boolean typeticket, Boolean stt, int prices, DiscountEntity discount,
-			PlaneEntity plane) {
-		super();
-		this.idticket = idticket;
-		this.typeticket = typeticket;
-		this.stt = stt;
-		this.prices = prices;
-		this.discount = discount;
-		this.plane = plane;
 	}
 	public void setPlane(PlaneEntity plane) {
 		this.plane = plane;

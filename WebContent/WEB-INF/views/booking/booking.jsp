@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PreBooking</title>
-    <link rel="stylesheet" href="./accets/FormBooking.css">
-    <link href="./accets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="./accets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/FormBooking.css">
+    <link href="http://localhost:8080/PTITHCM/accets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="http://localhost:8080/PTITHCM/accets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/1/14570d0f2b738b8dc8ef903949bce73c.svg">
-    <link rel="stylesheet" href="./accets/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
-<link rel="stylesheet" href="./accets/login.css">
+<link rel="stylesheet" href="http://localhost:8080/PTITHCM/fonts/themify-icons/themify-icons.css">
+<link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/login.css">
 <!-- Font awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-<link rel="stylesheet" href="./accets/preBookig.css">
+<link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/preBookig.css">
 </head>
 <body>
     <div class="main">
@@ -77,22 +77,12 @@
                             <div>
                                 <div class="card-body">
                                     <form method="POST">
-                                        <div class="form-row m-b-55">
-                                            <div class="name">Họ và Tên</div>
+                                        <div class="form-row">
+                                            <div class="name">Name</div>
                                             <div class="value">
-                                                <div class="row row-space">
-                                                    <div class="col-2">
-                                                        <div class="input-group-desc">
-                                                            <input class="input--style-5" type="text" name="first_name">
-                                                            <label class="label--desc">first name</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <div class="input-group-desc">
-                                                            <input class="input--style-5" type="text" name="last_name">
-                                                            <label class="label--desc">last name</label>
-                                                        </div>
-                                                    </div>
+                                                <div class="input-group">
+                                                    <input class="input--style-5" type="text" name="first_name">
+                                                    <label class="label--desc">Full Name</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -106,7 +96,7 @@
                                             </div>
                                         </div>
                                         <div class="form-row">
-                                            <div class="name">Số Điện Thoại</div>
+                                            <div class="name">Phone Number</div>
                                             <div class="value">
                                                 <div class="input-group">
                                                     <input class="input--style-5" type="text" name="phone">
@@ -115,7 +105,7 @@
                                             </div>
                                         </div>
                                         <div class="form-row">
-                                            <div class="name">CCCD/CMND</div>
+                                            <div class="name">Identity card number</div>
                                             <div class="value">
                                                 <div class="input-group">
                                                     <input class="input--style-5" type="text" name="CMND">
@@ -124,7 +114,7 @@
                                             </div>
                                         </div>
                                         <div class="form-row">
-                                            <div class="name">Ngày sinh</div>
+                                            <div class="name">Date of birth</div>
                                             <div class="value">
                                                 <div class="input-group">
                                                     <input class="input--style-5" type="date" name="birthday">
@@ -133,19 +123,19 @@
                                             </div>
                                         </div>
                                         <div class="form-row p-t-20">
-                                            <label class="label label--block">Bạn đồng ý với mức giá <span>546$</span>?</label>
+                                            <label class="label label--block">Do you agree with the price <span>546$</span>?</label>
                                             <div class="p-t-15">
-                                                <label class="radio-container m-r-55">Thanh toán ngay bằng MoMo
+                                                <label class="radio-container m-r-55">Instant payment with MoMo
                                                     <input type="radio" checked="checked" name="exist">
                                                     <span class="checkmark"></span>
                                                 </label>
                                                 <label>
-                                                    <img src="./img/momo.jpg" alt="Mã QR">
+                                                    <img src="http://localhost:8080/PTITHCM/img/momos.jpg" alt="QR CODE">
                                                 </label>
                                             </div>
                                         </div>
                                         <div>
-                                            <a href="index.html"><button class="btn btn__Book" type="button">Tiếp tục</button></a>
+                                            <a href="index.html"><button class="btn btn__Book" type="button">Continue</button></a>
                                         </div>
                                     </form>
                                 </div>
@@ -160,7 +150,7 @@
 
 <!-- React js -->
 
-    <script src="./accets/FormBooking.js"></script>
+    <script src="http://localhost:8080/PTITHCM/accets/FormBooking.js"></script>
     
     <!-- ... other HTML ... -->
 

@@ -36,7 +36,7 @@ public class AdminController {
 		String hql="from AdminEntity A where A.username="+"'"+LoginController.admin.getUsername()+"'";
 		String planehql="from PlaneEntity ORDER BY flighttime ASC";
 		Query plane =session.createQuery(planehql);
-		Query query = session.createQuery(hql);
+		Query query = session.createQuery(hql);	
 		List<AdminEntity> list = query.list();
 		List<PlaneEntity> planelist= plane.list();
 		model.addAttribute("staffs", list);

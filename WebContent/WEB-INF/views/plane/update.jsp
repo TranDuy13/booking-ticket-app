@@ -46,14 +46,14 @@
                                 <!-- ====================ITEMS================== -->
                           <%--   <c:forEach var = "s" items = "${planelist}"> --%>
                  <div class="best_offer--item">
-                                <div class="best_offer--item-img">
-                                    <img src="./img/Logo_HangHangKhong/bamboo.webp" alt="">
+                 				<div style="color: #73b860"  class="">
+                                     ${planes.airline }
                                 </div>
                                 <h4 class="best_offer--item-name">
-                                 		${planes.departFrom}
+                                    ${planes.departFrom}
                                 </h4>
                                 <p class="best_offer--GioKhoihanh">
-                                    ${planes.times}
+                                     
                                 </p>
                                 <div class="decorator">
                                     <div class="decorator_round" style="background-color: black;">
@@ -61,9 +61,7 @@
                                     </div>
                                     <div class="decorator_line">
                                         <div class="decorator__Hanghangkhong">
-                                            <span style="color: #73b860">
-                                                ${planes.airline }
-                                            </span>
+                     
                                         </div>
                                     </div>
                                     <div class="decorator_round">
@@ -71,9 +69,10 @@
                                     </div>
                                 </div>
                                 <h4 class="best_offer--item-name">
-                                    ${planes.destination}
+                                     ${planes.destination}
                                 </h4>
-                                <p class="best_offer--date">${planes.flighttime}</p>
+                                <p class="best_offer-cost">${planes.times}</p>
+                                <p class="best_offer--date">${planes.flighttime}	</p>
                             </div> 
 <%--                             </c:forEach> --%>
                                 <!-- ============================================== -->
@@ -155,7 +154,7 @@
                                                 </div>
                                             </div>
                                             <div>
-                                               <button type="submit" class="btn btn__Book" type="button">ADD</button>
+                                               <button type="submit" class="btn btn__Book" type="button">UPDATE</button>
                                             </div>
                                         </form:form>
                                     </div>
