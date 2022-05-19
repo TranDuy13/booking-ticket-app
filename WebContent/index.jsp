@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLIGHTS</title>
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="http://localhost:8080/PTITHCM/css/bootstrap.min.css">
+
+<!-- Style CSS -->
+<link rel="stylesheet" href="http://localhost:8080/PTITHCM/css/footer.css">
     <link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/1/14570d0f2b738b8dc8ef903949bce73c.svg">
     <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="http://localhost:8080/PTITHCM/fonts/themify-icons/themify-icons.css">
 <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/login.css">
 <!-- Font awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+
 
 </head>
 <body>
@@ -95,13 +101,13 @@
                 </div>
 
                 <div class="search_flights">
-                    <div class="places">
+                    <!-- <div class="places">
                         <div class="from">
                             <div class="places__title">
                                 <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-Location-Placeholder.png" alt="" class="icon">
                                 <p>FROM</p>
                             </div>
-                                <!-- <span class="text">Dhaka, Bangladesh</span> -->
+                                <span class="text">Dhaka, Bangladesh</span>
                                 <select name="Danhsachsanbay">
                                     <option>Dhaka, Bangladesh</option>
                                     <option>Delhi, Toronto, Mexico</option>
@@ -139,21 +145,16 @@
                             </select>
                             <p>Business</p>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="flight_date">
                         <div class="select_date">
                             <div class="places__title">
-                                <div>
-                                    <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-calendar-fill.png" alt="">
-                                </div>
-                                <p>DEPARTURE</p>
-                                <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-Arrow-top.png" alt="">
+                                <p>WELCOME TO MY HOME</p>
                             </div>
-                            <input type="date" value="2022-03-24">
                         </div>
                         
                     </div>
-                    <a href="search.htm"><button class="btn" type="button">SEARCH FLIGHT</button></a>
+                    <a href="search.htm"><button class="btn" type="button">ALL FLIGHTS</button></a>
                 </div>
                 <div class="special_offer">
                     <h3 class="special_offer--title">
@@ -262,12 +263,12 @@
                     </div>
                 </div>
                 <div class="over_wrap">
-                    <div class="best_offer">
+                    <!-- <div class="best_offer">
                         <h3 class="best_offer--title">
                             Best Offer
                         </h3>
                         <div class="list__best_offer">
-                            <!-- ====================ITEMS================== -->
+                            ====================ITEMS==================
                             <div class="best_offer--item">
                                 <div class="best_offer--item-img">
                                     <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/bamboo.webp" alt="">
@@ -305,8 +306,8 @@
                                     <i class="ti-angle-double-right"></i>
                                 </div>
                             </div>
-                            <!-- ============================================== -->
-                            <!-- ====================ITEMS================== -->
+                            ==============================================
+                            ====================ITEMS==================
                             <div class="best_offer--item">
                                 <div class="best_offer--item-img">
                                     <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/vienamairline.webp" alt="">
@@ -344,8 +345,8 @@
                                     <i class="ti-angle-double-right"></i>
                                 </div>
                             </div>
-                            <!-- ============================================== -->
-                            <!-- ====================ITEMS================== -->
+                            ==============================================
+                            ====================ITEMS==================
                             <div class="best_offer--item">
                                 <div class="best_offer--item-img">
                                     <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/bamboo.webp" alt="">
@@ -383,8 +384,8 @@
                                     <i class="ti-angle-double-right"></i>
                                 </div>
                             </div>
-                            <!-- ============================================== -->
-                           <!-- ====================ITEMS================== -->
+                            ==============================================
+                           ====================ITEMS==================
                            <div class="best_offer--item">
                             <div class="best_offer--item-img">
                                 <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/vietjet.webp">
@@ -422,8 +423,8 @@
                                 <i class="ti-angle-double-right"></i>
                             </div>
                         </div>
-                        <!-- ============================================== -->
-                            <!-- ====================ITEMS================== -->
+                        ==============================================
+                            ====================ITEMS==================
                             <div class="best_offer--item">
                                 <div class="best_offer--item-img">
                                     <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/vienamairline.webp" alt="">
@@ -461,9 +462,9 @@
                                     <i class="ti-angle-double-right"></i>
                                 </div>
                             </div>
-                            <!-- ============================================== -->
+                            ==============================================
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="deals">
                         <div class="deals-container">
@@ -475,7 +476,7 @@
                                 </div>
                             </div>
                             <a href="booking.htm">
-                                <div class="deal--btn">
+                                <div style="margin-right: 60px" class="deal--btn">
                                     BOOK NOW
                                 </div>
                             </a>
@@ -522,22 +523,64 @@
         </div>
     </div>
 
-<!-- React js -->
-<div id="like_button_container">
+	<footer class="footer-32892 pb-0">
+		<div class="site-section">
+			<div class="container">
 
-</div>
+
+				<div class="row">
+
+					<div class="col-md pr-md-5 mb-4 mb-md-0">
+						<h3>About Us</h3>
+						<p class="mb-4">Nguyen Xuan Tien - N19DCCN169</p>
+						<p class="mb-4">Bui Trong Anh - N19DCCN004</p>
+						<p class="mb-4">Tran Nhat Duy - N19DCCN031</p>
+						
+					</div>
+					<div class="col-md mb-4 mb-md-0">
+						<h3>Lecturers</h3>
+						<ul class="list-unstyled tweets">
+							<li class="d-flex">
+								<div class="mr-4">
+									<span class="icon icon-twitter"></span>
+								</div>
+								<div>Nguyen Trung Hieu</div>
+							</li>
+						
+						</ul>
+					</div>
+
+
+					<div style="box-sizing: border-box" class="col-md-3 mb-4 mb-md-0">
+						<h3>Author</h3>
+						<div class="row gallery">
+							
+							<div class="col-6">
+								<img style="width:130px ; border-radius:8px" src="https://lh6.googleusercontent.com/tWCrgJqsjkUJS6dpDNE34cKzNDQxpXJxRfjXS7GWZ1Bv7Y6yAnEJIUQ2QUArhOBd4XuZSaqJDaj5K0xJ4AcloHBYuaNhNVFhRf2LjjboUt_YhBQK6SLOflLdjm542CrlMA=w1280" alt="Image" class="img-fluid">
+							</div>
+							<div class="col-6">
+								<img style="width:130px ; border-radius:8px" src="https://lh4.googleusercontent.com/xmlW5DMNHj7tPtcz93cP-Lulz1pAFom15-Zo2mYjSv9ohAyNPwFlYXv5fhbAt1SG6Ll3mp7RwXxLM29G8ecDkska06uAQY4kcEBIean6vvr5IAmgUd_x1iJ5ax_4OA2uNQ=w1280" alt="Image" class="img-fluid">		
+							</div>
+						</div>
+						<div style="margin-top:10px"  class="row gallery">
+							<div class="col-6">
+								<img style="width:130px ; border-radius:8px" src="https://lh5.googleusercontent.com/N2WacCZFFtJtWQXij6_U0NenRkl2gm22fM7HENiRccsvzKvLlsZulLoGyRB_3sRabm_S9W6Trnz2ZUK63qeNJU7lTNoATaEiPRp0qfcspmULzyooiWNP_O7eFdNxzLzWmg=w1280" alt="Image" class="img-fluid"> 
+							</div>
+							
+						</div>
+					</div>
+					
+
+
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
 
     <script src="http://localhost:8080/PTITHCM/accets/login.js"></script>
-    <!-- ... other HTML ... -->
 
-  <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-
-  <!-- Load our React component. -->
-  <script src="like_button.js"></script>
-  
 
 </body>
 </html>

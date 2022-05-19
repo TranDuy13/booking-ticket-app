@@ -53,7 +53,9 @@
                                         <div class="col-12">
                                             <label>Username<span class="text-danger">*</span></label>
                                             <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                <div class="input-group-text">
+													<img alt="hi" src="http://localhost:8080/PTITHCM/img/person-badge.svg">
+												</div>
                                                 <input type="text" name="username"class="form-control"  placeholder="Enter Username" required>
                                             </div>
                                         </div>
@@ -61,7 +63,7 @@
                                         <div class="col-12">
                                             <label>Password<span class="text-danger">*</span></label>
                                             <div class="input-group">
-                                                <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                <div class="input-group-text"><img alt="hi" src="http://localhost:8080/PTITHCM/img/file-earmark-lock2.svg"></div>
                                                 <input class="form-control" type="password" name="password" placeholder="Enter Password" required>
                                             </div>
                                         </div>

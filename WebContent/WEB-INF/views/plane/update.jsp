@@ -44,9 +44,38 @@
                     <div class="best_offer ">
                             
                                 <!-- ====================ITEMS================== -->
-                                <div class="best_offer--item">
-                                   HAVE A GOOD DAY!
+                          <%--   <c:forEach var = "s" items = "${planelist}"> --%>
+                 <div class="best_offer--item">
+                                <div class="best_offer--item-img">
+                                    <img src="./img/Logo_HangHangKhong/bamboo.webp" alt="">
                                 </div>
+                                <h4 class="best_offer--item-name">
+                                 		${planes.departFrom}
+                                </h4>
+                                <p class="best_offer--GioKhoihanh">
+                                    ${planes.times}
+                                </p>
+                                <div class="decorator">
+                                    <div class="decorator_round" style="background-color: black;">
+
+                                    </div>
+                                    <div class="decorator_line">
+                                        <div class="decorator__Hanghangkhong">
+                                            <span style="color: #73b860">
+                                                ${planes.airline }
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="decorator_round">
+
+                                    </div>
+                                </div>
+                                <h4 class="best_offer--item-name">
+                                    ${planes.destination}
+                                </h4>
+                                <p class="best_offer--date">${planes.flighttime}</p>
+                            </div> 
+<%--                             </c:forEach> --%>
                                 <!-- ============================================== -->
                             
                                 

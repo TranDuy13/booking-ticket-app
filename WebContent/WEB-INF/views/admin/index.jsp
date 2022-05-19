@@ -17,8 +17,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/main.css">
-    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/aaa.css">
+    
+    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/adminsite.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <!-- Font awesome -->
@@ -32,22 +32,22 @@
            
                 <div class="user_info--user user_info--user2">
                     
-                        <img src="http://localhost:8080/PTITHCM/img/user/user-ava.png" alt="">
+                        <img style="border-radius:50%" src="http://localhost:8080/PTITHCM/img/user/user-avas.png" alt="">
                     <c:forEach var = "s" items = "${staffs}">
                     	<span class="user_name">${s.name}</span>
                     </c:forEach>
                     <div class="arrow arrow2">
                         <img src="http://localhost:8080/PTITHCM/img/user/Icon-Arrow-Down.svg" alt="">
                     </div>
-                <div class="arrow arrow2">
-                    <ul>
-                        <a href="admin/logout.htm">
-                            <li> 
-                                LOG OUT
-                            </li>
-                        </a>
-                    </ul>
-                </div>
+	                <div class="arrow arrow2 user--subnav">
+	                    <ul style="margin-bottom: 0rem">
+	                        <a href="admin/logout.htm">
+	                            <li> 
+	                                LOG OUT
+	                            </li>
+	                        </a>
+	                    </ul>
+	                </div>
             </div>
         </div>
 
@@ -147,5 +147,19 @@
 	    	</div>
 
 <script src="http://localhost:8080/PTITHCM/accets/admin_site.js"></script>
+<script>
+	var SuvMenu = document.querySelector(".user_info--user");
+	openSuvMenu = document.querySelector(".user--subnav");
+	
+	
+	SuvMenu.onclick = function(){
+	    if(openSuvMenu.style.display == "block"){
+	        openSuvMenu.style.display = "none";
+	    }
+	    else{
+	        openSuvMenu.style.display = "block";
+	    }
+	};
+</script>
 </body>
 </html>

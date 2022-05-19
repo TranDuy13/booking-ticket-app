@@ -43,7 +43,7 @@
                     <div class="best_offer ">
                             
                                 <!-- ====================ITEMS================== -->
-                                <div class="best_offer--item">
+                                <div style="justify-content: center" class="best_offer--item">
                                    HAVE A GOOD DAY!
                                 </div>
                                 <!-- ============================================== -->

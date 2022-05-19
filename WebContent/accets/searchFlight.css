@@ -98,12 +98,66 @@ img {
 }
 
 .search_flights {
-	display: flex;
-    justify-content: space-between;
-    margin: 0 60px 42px;
+	margin: 0 60px 42px;
     background-color: #FFFFFF;
     border-radius: 16px;
+    padding: 35px 40px 38px 38px;
+    position: relative;
 }
+
+.places {
+    display: flex;
+    height: 65px;
+    margin-top: 33px;
+    justify-content: space-between;
+    font-family: 'Open Sans';
+}
+.from {
+    margin-left: 19px;
+}
+
+.to {
+    margin-left: 9px;
+}
+
+.class {
+    margin-right: 132px;
+}
+.select_date {
+    width: 212px;
+    height: 67px;
+    margin-right: 56px;
+}
+
+.places__title p {
+    margin-right: 119px;
+}
+.icon,.icon ~ p{
+    display: inline-block;
+}
+.places__title ~ .text {
+    font-size: 16px;
+    color: #2E3758;
+    font-weight: 700;
+}
+.places__title ~ p {
+    font-size: 12px;
+    color: #475073;
+    line-height:28px;
+}
+.flight_date {
+    padding-left: 19px;
+    display: flex;
+    justify-content:flex-start;
+    margin-top: 37px;
+}
+.sub-select-date {
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
 .special_offer {
     height: 239px;
     background: #f7f9fa;
@@ -267,10 +321,6 @@ ul.nav_bar--list li {
 }
 
 
-.search_flights {
-    padding: 35px 40px 38px 38px;
-    position: relative;
-}
 
 .select {
     display: flex;
@@ -315,7 +365,17 @@ ul.nav_bar--list li {
     font-size: 18px;
     font-weight: 800;
     color: #fff;
-
+}
+.search_flights .btn {
+    position: absolute;
+    bottom: 40px;
+    right: 38px;
+}
+.search_flights .btn a{
+    color: #fff;
+    text-decoration: none;
+    height:88px ;
+    width:224px;
 }
 .btn:hover{
     cursor: pointer;
@@ -327,7 +387,13 @@ ul.nav_bar--list li {
     font-size: 24px;
     font-weight: 700;
 }
-
+.places__title {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(71 80 115 / 33%);
+    margin-left: 1px;
+    margin-bottom: 5px;
+}
 /* ==================Special offer=============== */
 .special_offer--title {
     font-size: 24px;
@@ -426,7 +492,7 @@ ul.nav_bar--list li {
 
 .best_offer--item {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 75.5px;
     width: 1010px;
     font-size: 18px;
