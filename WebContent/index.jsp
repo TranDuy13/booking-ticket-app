@@ -154,7 +154,7 @@
                         </div>
                         
                     </div>
-                    <a href="search.htm"><button class="btn" type="button">ALL FLIGHTS</button></a>
+                    <a href="searchTicket.htm"><button class="btn" type="button">ALL FLIGHTS</button></a>
                 </div>
                 <div class="special_offer">
                     <h3 class="special_offer--title">
@@ -556,15 +556,15 @@
 						<div class="row gallery">
 							
 							<div class="col-6">
-								<img style="width:130px ; border-radius:8px" src="https://lh6.googleusercontent.com/tWCrgJqsjkUJS6dpDNE34cKzNDQxpXJxRfjXS7GWZ1Bv7Y6yAnEJIUQ2QUArhOBd4XuZSaqJDaj5K0xJ4AcloHBYuaNhNVFhRf2LjjboUt_YhBQK6SLOflLdjm542CrlMA=w1280" alt="Image" class="img-fluid">
+								<img style="width:130px ; border-radius:8px" src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/277780206_499898278460431_4562359855336272715_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Mk0R3jlnfaEAX-7y-hr&_nc_ht=scontent.fsgn2-6.fna&oh=00_AT9eANfKZL8iLKjWIWMxbrkUCKBMNPYCU3oQFr8vkPHZFw&oe=628BBF2A" alt="Image" class="img-fluid">
 							</div>
 							<div class="col-6">
-								<img style="width:130px ; border-radius:8px" src="https://lh4.googleusercontent.com/xmlW5DMNHj7tPtcz93cP-Lulz1pAFom15-Zo2mYjSv9ohAyNPwFlYXv5fhbAt1SG6Ll3mp7RwXxLM29G8ecDkska06uAQY4kcEBIean6vvr5IAmgUd_x1iJ5ax_4OA2uNQ=w1280" alt="Image" class="img-fluid">		
+								<img style="width:130px ; border-radius:8px" src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/273897406_1003805896914057_6075735713796241329_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=jvFhUAsIxEYAX8k0sgS&tn=oYuRQajHkUl2p17f&_nc_ht=scontent.fsgn2-6.fna&oh=00_AT-cUtoyRmKhO1dv9PynacDHBILljy6CxAgrIpnYbqXoiA&oe=628D3C7C" alt="Image" class="img-fluid">		
 							</div>
 						</div>
 						<div style="margin-top:10px"  class="row gallery">
 							<div class="col-6">
-								<img style="width:130px ; border-radius:8px" src="https://lh5.googleusercontent.com/N2WacCZFFtJtWQXij6_U0NenRkl2gm22fM7HENiRccsvzKvLlsZulLoGyRB_3sRabm_S9W6Trnz2ZUK63qeNJU7lTNoATaEiPRp0qfcspmULzyooiWNP_O7eFdNxzLzWmg=w1280" alt="Image" class="img-fluid"> 
+								<img style="width:130px ; border-radius:8px" src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.6435-9/117340282_2708949252721391_4390470943708845602_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=s7MmNAzsSysAX975Bl9&_nc_ht=scontent.fsgn2-3.fna&oh=00_AT_U9_1mjZfawQ7r8_r69JAmrcGUP0r_I_XRchcmvY4a_g&oe=62AD5C30" alt="Image" class="img-fluid"> 
 							</div>
 							
 						</div>

@@ -64,7 +64,7 @@
                         </li>
                 
                     
-                        <a href="admin/index.htm" class="Tickets_link">
+                        <a href="	" class="Tickets_link">
                             <li>
                                 <div class="img" style="width: 20px">
                                     <img src="http://localhost:8080/PTITHCM/img/icon/icon-card/Icon-Stay-Villa.png" alt="">

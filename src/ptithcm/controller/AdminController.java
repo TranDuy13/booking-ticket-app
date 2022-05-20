@@ -1,4 +1,4 @@
-package ptithcm.controller;
+ package ptithcm.controller;
 
 
 import java.util.Date;
@@ -27,6 +27,7 @@ import ptithcm.entity.PlaneEntity;
 public class AdminController {
 	@Autowired
 	SessionFactory factory;
+	
 	@RequestMapping("index")
 	public String index(ModelMap model) {
 		if(LoginController.admin.getUsername()==null) {

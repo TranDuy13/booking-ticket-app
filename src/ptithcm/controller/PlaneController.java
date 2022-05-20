@@ -35,18 +35,31 @@ public class PlaneController{
       @RequestMapping(value="form", method=RequestMethod.GET)
       public String form(ModelMap model){
             model.addAttribute("planes", new PlaneEntity());
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            String  strDate = formatter.format(date);
+            model.addAttribute("a", strDate);
             return "plane/form";
       }
       @RequestMapping(value="form", method=RequestMethod.POST)
       public String form(HttpServletRequest request, ModelMap model, @ModelAttribute("planes") PlaneEntity planes) throws Exception{
            Session session=factory.openSession();
            Transaction t= session.beginTransaction();;
-
+           String dep = request.getParameter("departFrom");
+           String des = request.getParameter("destination");
+           String airline = request.getParameter("airline");
+           Date date = new Date();
+           SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+           String  strDate = formatter.format(date);
+           model.addAttribute("a", strDate);
 
             try{
                   String stringDate = String.valueOf(request.getParameter("abc"));
                	  Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(stringDate);
             	  planes.setFlighttime(date1);
+            	  planes.setAirline(airline);
+            	  planes.setDepartFrom(dep);
+            	  planes.setDestination(des);
                   session.save(planes);
                   t.commit();
                   model.addAttribute("message", "Thêm mới thành công !");
@@ -99,6 +112,10 @@ public class PlaneController{
 	public String editUser ( ModelMap model, PlaneEntity planes, 
 			@PathVariable("idplane") String idplane) {
 		List<PlaneEntity> list = this.getPlanes();
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String  strDate = formatter.format(date);
+        model.addAttribute("a", strDate);
 		model.addAttribute("plane", list);
 		model.addAttribute("planes", this.getPlane(idplane));
 		return "plane/update";
@@ -115,9 +132,16 @@ public class PlaneController{
 		// TODO Auto-generated method stub
 		Session session = factory.openSession();
 		Transaction t = session.beginTransaction();
+        String dep = request.getParameter("departFrom");
+        String des = request.getParameter("destination");
+        String airline = request.getParameter("airline");
+
 		try {
             String stringDate = String.valueOf(request.getParameter("abc"));
          	Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(stringDate);
+	      	  planes.setAirline(airline);
+	      	  planes.setDepartFrom(dep);
+	      	  planes.setDestination(des);
          	planes.setFlighttime(date1);
 			session.update(planes);
 			t.commit();

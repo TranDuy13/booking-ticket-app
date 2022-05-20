@@ -101,7 +101,7 @@
 							  <tbody>
    					   <c:forEach var = "b" items = "${tickets}">
 							    <tr>
-							    <th scope="row">${planes.idplane}</th>
+							    <th scope="row">${b.plane.idplane}</th>
                                 <th scope="row">${b.idticket}</th>
                              <c:choose>
 								<c:when test="${b.typeticket ==true}">

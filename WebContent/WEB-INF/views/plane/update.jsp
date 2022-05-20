@@ -100,7 +100,20 @@
                                                 <div class="name">FROM</div>
                                                 <div class="value">
                                                     <div class="input-group">
-                                                        <form:input class="input--style-5" type="text" path="departFrom"/>
+                                                 <select name="departFrom">
+				                                    <option>DAK LAK</option>
+				                                    <option>NGHE AN</option>
+				                                    <option>HA NOI</option>
+				                                    <option>HAN QUOC</option>
+				                                    <option>PHU QUOC</option>
+				                                    <option>QUANG BINH</option>
+				                                    <option>DA LAT</option>  
+				                                    <option>DA NANG</option> 
+				                                    <option>KHANH HOA</option> 
+				                                    <option>HO CHI MINH</option>
+				                                    <option>CAN THO</option>
+				                                    <option>KON TUM</option>
+				                                </select>
                                                         <label class="label--desc">FROM</label>
                                                     </div>
                                                 </div>
@@ -109,7 +122,20 @@
                                                 <div class="name">TO</div>
                                                 <div class="value">
                                                     <div class="input-group">
-                                                        <form:input class="input--style-5" type="text" path="destination"/>
+                                                <select name="destination">
+				                                    <option>DAK LAK</option>
+				                                    <option>NGHE AN</option>
+				                                    <option>HA NOI</option>
+				                                    <option>HAN QUOC</option>
+				                                    <option>PHU QUOC</option>
+				                                    <option>QUANG BINH</option>
+				                                    <option>DA LAT</option>  
+				                                    <option>HO CHI MINH</option>
+				                                    <option>DA NANG</option> 
+				                                    <option>KHANH HOA</option> 
+				                                    <option>CAN THO</option>
+				                                    <option>KON TUM</option>
+				                                </select>
                                                         <label class="label--desc">TO</label>
                                                     </div>
                                                 </div>
@@ -127,7 +153,12 @@
                                                 <div class="name">AIRLINE</div>
                                                 <div class="value">
                                                     <div class="input-group">
-                                                        <form:input class="input--style-5" type="text" path="airline"/>
+                                                 <select name="airline">
+				                                    <option>VIETNAM AIRLINE</option>
+				                                    <option>BAMBOO AIRWAY</option>
+				                                    <option>VIETJET AIR</option>
+				                               
+				                                </select>
                                                          <label class="label--desc">AIRLINE</label>
                                                     </div>
                                                     
@@ -147,7 +178,7 @@
                                                 <div class="name">FLIGHT TIME</div>
                                                 <div class="value">
                                                     <div class="input-group">
-                                                        <input class="input--style-5" type="date" name="abc">
+                                                        <input class="input--style-5" type="date" value="${planes.flighttime}" name="abc" min="${a}">
                                                      
                                                          <label class="label--desc">FLIGHT TIME</label>
                                                     </div>

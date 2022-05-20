@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix = "c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix = "form"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,6 +80,7 @@
                 </div>
             </div>
             <div class="container">
+               <form action="searchTicket.htm" method="post">
                 <div class="search_flights">
                     <div class="places">
                         <div class="from">
@@ -84,15 +88,21 @@
                                 <img src="./img/icon/icon-flight_search/Icon-Location-Placeholder.png" alt="" class="icon">
                                 <p>FROM</p>
                             </div>
-                                <!-- <span class="text">Dhaka, Bangladesh</span> -->
-                                <select name="Danhsachsanbay">
-                                    <option>Dhaka, Bangladesh</option>
-                                    <option>Delhi, Toronto, Mexico</option>
-                                    <option>Chennai, Mumbai</option>
-                                    <option>Mumbai, Bangalore, Pune</option>
-                                    <option>Pune, Mumbai, Kolkata</option>
-                                        
-                                </select>
+                              `
+                                                <select name="departFrom">
+				                                    <option>DAK LAK</option>
+				                                    <option>NGHE AN</option>
+				                                    <option>HA NOI</option>
+				                                    <option>HAN QUOC</option>
+				                                    <option>PHU QUOC</option>
+				                                    <option>QUANG BINH</option>
+				                                    <option>DA LAT</option>  
+				                                    <option>DA NANG</option> 
+				                                    <option>KHANH HOA</option> 
+				                                    <option>CAN THO</option>
+				                                    <option>KON TUM</option>
+				                                    <option>HO CHI MINH</option>
+				                                </select>
                                     
         
                         </div>
@@ -102,23 +112,29 @@
                                 <img src="./img/icon/icon-flight_search/Icon-Location-Placeholder.png" alt="" class="icon">
                                 <p>T0</p>
                             </div>
-                            <select name="Danhsachsanbay">
-                                <option>Dhaka, Bangladesh</option>
-                                <option>Delhi, Toronto, Mexico</option>
-                                <option>Chennai, Mumbai</option>
-                                <option>Mumbai, Bangalore, Pune</option>
-                                <option>Pune, Mumbai, Kolkata</option>
-                                    
-                            </select>
+                                               <select name="destination">
+				                                    <option>DAK LAK</option>
+				                                    <option>NGHE AN</option>
+				                                    <option>HA NOI</option>
+				                                    <option>HAN QUOC</option>
+				                                    <option>PHU QUOC</option>
+				                                    <option>QUANG BINH</option>
+				                                    <option>DA LAT</option>  
+				                                    <option>DA NANG</option> 
+				                                    <option>KHANH HOA</option> 
+				                                    <option>CAN THO</option>
+				                                    <option>KON TUM</option>
+				                                    <option>HO CHI MINH</option>
+				                                </select>
                         </div>
                         <div class="class">
                             <div class="places__title">
                                 <img src="./img/icon/icon-flight_search/Icon-class-Seat.png" alt="" class="icon">
                                 <p>CLASS</p>
                             </div>
-                            <select name="class_flight" id="">
-                                <option>Bussiness</option>
-                                <option>Eco</option>
+                            <select name="typeTicket" >
+                                <option>Business</option>
+                                <option>Economy</option>
                             </select>
                         </div>
                     </div>
@@ -131,154 +147,52 @@
                                 <p>DEPARTURE</p>
                                 <img src="./img/icon/icon-flight_search/Icon-Arrow-top.png" alt="">
                             </div>
-                            <input type="date" value="2022-03-24">
+                            <input type="date" value="${a}" min="${a}">
                         </div>	
                         
                     </div>
-                    <a href="#"><button class="btn" type="button">SEARCH FLIGHT</button></a>
+                    <button type="submit" class="btn">SEARCH FLIGHT</button>
                 </div>
+               </form>
 
-				<div class="over_wrap" style="padding-left: 60px; padding-bottom: 30px;">
+				<div class="over_wrap" style="padding-left: 60px; padding-bottom: 30px;">	
+				  
+				  		
 					<div class="best_offer" style="margin-right: 55px;">
 						<div class="list__best_offer">
 							<!-- ====================ITEMS================== -->
+							<c:forEach var = "a" items = "${ticketsss}">
 							<div class="best_offer--item">
 								<div class="best_offer--item-img">
 									<img src="./img/Logo_HangHangKhong/bamboo.webp" alt="">
 								</div>
-								<h4 class="best_offer--item-name">TP HCM - SGN</h4>
-								<p class="best_offer--GioKhoihanh">14:05</p>
+								<h4 class="best_offer--item-name">${a.plane.departFrom}</h4>
+								<p class="best_offer--GioKhoihanh">${a.plane.times}</p>
 								<div class="decorator">
 									<div class="decorator_round" style="background-color: black;">
 
 									</div>
 									<div class="decorator_line">
 										<div class="decorator__Hanghangkhong">
-											<span style="color: #73b860"> Bamboo </span>
+											<span style="color: #73b860"> ${a.plane.airline } </span>
 										</div>
 									</div>
 									<div class="decorator_round"></div>
 								</div>
-								<h4 class="best_offer--item-name">DA NANG - DND</h4>
-								<p class="best_offer-cost">$546</p>
-								<p class="best_offer--date">15 Aug - 22 Aug</p>
+								<h4 class="best_offer--item-name">${a.plane.destination }</h4>
+								<p class="best_offer-cost"></p>
+								<p class="best_offer--date">${a.plane.flighttime}</p>
 								<div class="best_offer-btn">
 									<p>Book Now</p>
 									<i class="ti-angle-double-right"></i>
 								</div>
 							</div>
-							<!-- ============================================== -->
-							<!-- ====================ITEMS================== -->
-							<div class="best_offer--item">
-								<div class="best_offer--item-img">
-									<img src="./img/Logo_HangHangKhong/vienamairline.webp" alt="">
-								</div>
-								<h4 class="best_offer--item-name">TP HCM - SGN</h4>
-								<p class="best_offer--GioKhoihanh">15:00</p>
-								<div class="decorator">
-									<div class="decorator_round" style="background-color: black;">
+							</c:forEach>
 
-									</div>
-									<div class="decorator_line">
-										<div class="decorator__Hanghangkhong">
-											<span style="color: #d8b05f"> VNA </span>
-										</div>
-									</div>
-									<div class="decorator_round"></div>
-								</div>
-								<h4 class="best_offer--item-name">DA LAT - DLI</h4>
-								<p class="best_offer-cost">$546</p>
-								<p class="best_offer--date">15 Aug - 22 Aug</p>
-								<div class="best_offer-btn">
-									<p>Book Now</p>
-									<i class="ti-angle-double-right"></i>
-								</div>
-							</div>
-							<!-- ============================================== -->
-							<!-- ====================ITEMS================== -->
-							<div class="best_offer--item">
-								<div class="best_offer--item-img">
-									<img src="./img/Logo_HangHangKhong/bamboo.webp" alt="">
-								</div>
-								<h4 class="best_offer--item-name">HA NOI - HAN</h4>
-								<p class="best_offer--GioKhoihanh">17:30</p>
-								<div class="decorator">
-									<div class="decorator_round" style="background-color: black;">
 
-									</div>
-									<div class="decorator_line">
-										<div class="decorator__Hanghangkhong">
-											<span style="color: #73b860"> Bamboo </span>
-										</div>
-									</div>
-									<div class="decorator_round"></div>
-								</div>
-								<h4 class="best_offer--item-name">DA NANG - DNA</h4>
-								<p class="best_offer-cost">$800</p>
-								<p class="best_offer--date">15 Aug - 22 Aug</p>
-								<div class="best_offer-btn">
-									<p>Book Now</p>
-									<i class="ti-angle-double-right"></i>
-								</div>
-							</div>
-							<!-- ============================================== -->
-							<!-- ====================ITEMS================== -->
-							<div class="best_offer--item">
-								<div class="best_offer--item-img">
-									<img src="./img/Logo_HangHangKhong/vietjet.webp">
-								</div>
-								<h4 class="best_offer--item-name">TP HCM - SGN</h4>
-								<p class="best_offer--GioKhoihanh">20:00</p>
-								<div class="decorator">
-									<div class="decorator_round" style="background-color: black;">
-
-									</div>
-									<div class="decorator_line">
-										<div class="decorator__Hanghangkhong">
-											<span style="color: red"> Vietjet </span>
-										</div>
-									</div>
-									<div class="decorator_round"></div>
-								</div>
-								<h4 class="best_offer--item-name">VINH - VII</h4>
-								<p class="best_offer-cost">$546</p>
-								<p class="best_offer--date">15 Aug - 22 Aug</p>
-								<div class="best_offer-btn">
-									<p>Book Now</p>
-									<i class="ti-angle-double-right"></i>
-								</div>
-							</div>
-							<!-- ============================================== -->
-							<!-- ====================ITEMS================== -->
-							<div class="best_offer--item">
-								<div class="best_offer--item-img">
-									<img src="./img/Logo_HangHangKhong/vienamairline.webp" alt="">
-								</div>
-								<h4 class="best_offer--item-name">VINH - VII</h4>
-								<p class="best_offer--GioKhoihanh">22:00</p>
-								<div class="decorator">
-									<div class="decorator_round" style="background-color: black;">
-
-									</div>
-									<div class="decorator_line">
-										<div class="decorator__Hanghangkhong">
-											<span style="color: #d8b05f"> VNA </span>
-										</div>
-									</div>
-									<div class="decorator_round"></div>
-								</div>
-								<h4 class="best_offer--item-name">DA NANG - DNA</h4>
-								<p class="best_offer-cost">$546</p>
-								<p class="best_offer--date">15 Aug - 22 Aug</p>
-								<div class="best_offer-btn">
-									<p>Book Now</p>
-									<i class="ti-angle-double-right"></i>
-								</div>
-							</div>
-							<!-- ============================================== -->
 						</div>
 					</div>
-
+				
 
 				</div>
 
