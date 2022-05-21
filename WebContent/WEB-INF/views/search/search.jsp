@@ -147,7 +147,7 @@
                                 <p>DEPARTURE</p>
                                 <img src="./img/icon/icon-flight_search/Icon-Arrow-top.png" alt="">
                             </div>
-                            <input type="date" value="${a}" min="${a}">
+                            <input type="date" value="${a}" min="${a}" name="abc">
                         </div>	
                         
                     </div>
@@ -170,7 +170,7 @@
 								<p class="best_offer--GioKhoihanh">${a.plane.times}</p>
 								<div class="decorator">
 									<div class="decorator_round" style="background-color: black;">
-
+											
 									</div>
 									<div class="decorator_line">
 										<div class="decorator__Hanghangkhong">
@@ -180,10 +180,13 @@
 									<div class="decorator_round"></div>
 								</div>
 								<h4 class="best_offer--item-name">${a.plane.destination }</h4>
-								<p class="best_offer-cost"></p>
+								<p class="best_offer-cost">${a.prices }$</p>
 								<p class="best_offer--date">${a.plane.flighttime}</p>
 								<div class="best_offer-btn">
+								<a href="${a.idticket}.htm">
 									<p>Book Now</p>
+								</a>
+									
 									<i class="ti-angle-double-right"></i>
 								</div>
 							</div>

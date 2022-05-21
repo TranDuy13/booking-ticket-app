@@ -44,7 +44,7 @@ public class PlaneController{
       @RequestMapping(value="form", method=RequestMethod.POST)
       public String form(HttpServletRequest request, ModelMap model, @ModelAttribute("planes") PlaneEntity planes) throws Exception{
            Session session=factory.openSession();
-           Transaction t= session.beginTransaction();;
+           Transaction t= session.beginTransaction();
            String dep = request.getParameter("departFrom");
            String des = request.getParameter("destination");
            String airline = request.getParameter("airline");

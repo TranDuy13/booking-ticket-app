@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix = "c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix = "form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,15 +43,15 @@
                                 <div class="decorator_line">
                                         <div class="decorator__Hanghangkhong">
                                             <span style="color: #73b860">
-                                                Bamboo
+                                                ${ticketss.plane.airline }
                                             </span>
                                         </div>
                                     </div>
                                 <h4 class="best_offer--item-name">
-                                    TP HCM - SGN
+                                    ${ticketss.plane.departFrom}
                                 </h4>
                                 <p class="best_offer--GioKhoihanh">
-                                    14:05
+                                    ${ticketss.plane.times }
                                 </p>
                                 <div class="decorator">
                                     <div class="decorator_round" style="background-color: black;">
@@ -61,10 +63,10 @@
                                     </div>
                                 </div>
                                 <h4 class="best_offer--item-name">
-                                    DA NANG - DND
+                                     ${ticketss.plane.destination }
                                 </h4>
-                                <p class="best_offer-cost">$546</p>
-                                <p class="best_offer--date">15 Aug - 22 Aug</p>
+                                <p class="best_offer-cost">${ticketss.prices}$</p>
+                                <p class="best_offer--date">${ticketss.plane.flighttime }</p>
                             </div>
                             <!-- ============================================== -->
                         
@@ -76,12 +78,12 @@
                         <div class="wrapper wrapper--w790">
                             <div>
                                 <div class="card-body">
-                                    <form method="POST">
+                                    <form:form action="${ticketss.idticket}.htm"  modelAttribute="customer" method="post">
                                         <div class="form-row">
                                             <div class="name">Name</div>
                                             <div class="value">
                                                 <div class="input-group">
-                                                    <input class="input--style-5" type="text" name="first_name">
+                                                    <form:input class="input--style-5" type="text" path="fullname"/>
                                                     <label class="label--desc">Full Name</label>
                                                 </div>
                                             </div>
@@ -90,7 +92,7 @@
                                             <div class="name">Email</div>
                                             <div class="value">
                                                 <div class="input-group">
-                                                    <input class="input--style-5" type="email" name="email">
+                                                    <form:input class="input--style-5" type="email" path="email"/>
                                                     <label class="label--desc">Email</label>
                                                 </div>
                                             </div>
@@ -99,7 +101,7 @@
                                             <div class="name">Phone Number</div>
                                             <div class="value">
                                                 <div class="input-group">
-                                                    <input class="input--style-5" type="text" name="phone">
+                                                    <form:input class="input--style-5" type="number" path="telephone"/>
                                                     <label class="label--desc">Phone Number</label>
                                                 </div>
                                             </div>
@@ -108,8 +110,17 @@
                                             <div class="name">Identity card number</div>
                                             <div class="value">
                                                 <div class="input-group">
-                                                    <input class="input--style-5" type="text" name="CMND">
+                                                    <input class="input--style-5" type="number" name="ids"/>
                                                     <label class="label--desc">CMND/CCCD</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="name">Nationality</div>
+                                            <div class="value">
+                                                <div class="input-group">
+                                                    <form:input class="input--style-5" type="text" path="nationality"/>
+                                                    <label class="label--desc">Nationality</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -117,13 +128,13 @@
                                             <div class="name">Date of birth</div>
                                             <div class="value">
                                                 <div class="input-group">
-                                                    <input class="input--style-5" type="date" name="birthday">
+                                                    <input class="input--style-5" type="date" name="abcd">
                                                     
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-row p-t-20">
-                                            <label class="label label--block">Do you agree with the price <span>546$</span>?</label>
+                                            <label class="label label--block">Do you agree with the price <span>${ticketss.prices }$</span>?</label>
                                             <div class="p-t-15">
                                                 <label class="radio-container m-r-55">Instant payment with MoMo
                                                     <input type="radio" checked="checked" name="exist">
@@ -135,9 +146,9 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <a href="index.html"><button class="btn btn__Book" type="button">Continue</button></a>
+                                            <button class="btn btn__Book" type="submit">Continue</button>
                                         </div>
-                                    </form>
+                                    </form:form>
                                 </div>
                             </div>
                         </div>

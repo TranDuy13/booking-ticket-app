@@ -17,12 +17,17 @@ public class CustomerEntity {
 	@Id
 	@Column(name="idcard")
 	private String idcard;
+	@Column(name="fullname")
 	private String fullname;
+	@Column(name="email")
 	private String email;
+	@Column(name="telephone")
 	private int telephone;
+	@Column(name="birthday")
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern = "dd/mm/yyyy")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date birthday;
+	@Column(name="nationality")
 	private String nationality;
 	@OneToOne(mappedBy="customer")
 	private DetailEntity detail;
