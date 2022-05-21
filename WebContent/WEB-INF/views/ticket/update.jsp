@@ -74,6 +74,14 @@
                                 <span>Ticket List</span>
                             </li>
                         </a>
+              			<a href="admin/customer.htm" class="Tickets_link">
+                            <li>
+                                <div class="img" style="width: 20px">
+                                    <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-Options-3Dots.png" alt="">
+                                </div>
+                                <span>Customer</span>
+                            </li>
+                        </a>
                     </ul>
             </div>
             <div class="over_wrap">

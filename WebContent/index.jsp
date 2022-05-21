@@ -44,7 +44,7 @@
                                 <span>Home</span>
                             </li>
                         </a>
-                        <a href="" class="Booking_link">
+                        <a href="searchTicket.htm" class="Booking_link">
                             <li>
                                 <div class="img"><img src="http://localhost:8080/PTITHCM/img/icon/icon-navbar/Icon-Booking-Fill.svg" alt="">
                                     </div>

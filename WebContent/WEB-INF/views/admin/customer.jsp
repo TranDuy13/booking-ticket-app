@@ -80,7 +80,7 @@
                                 <span>Ticket List</span>
                             </li>
                         </a>
-                          <a href="admin/customer.htm" class="Tickets_link">
+                         <a href="admin/customer.htm" class="Tickets_link">
                             <li>
                                 <div class="img" style="width: 20px">
                                     <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-Options-3Dots.png" alt="">
@@ -92,40 +92,27 @@
             </div>
                 <div class="container">
                     <div class="best_offer data">
-                    <a href="admin/form.htm">
-                   		 <button class="btn_add_tour">ADD</button>
-                    </a>
                           <table class="table table-hover">
 							  <thead class="thead-light">
 							    <tr>
 							      <th scope="col">ID</th>
-							      <th scope="col">FROM</th>
-							      <th scope="col">TO</th>
-							      <th scope="col">AIRPORT</th>
-							      <th scope="col">AIRLINE</th>
-							      <th scope="col">FLIGHT TIME</th>
-							      <th scope="col">EDIT</th>
+							      <th scope="col">NAME</th>
+							      <th scope="col">EMAIL</th>
+							      <th scope="col">PHONE</th>
+							      <th scope="col">BIRTHDAY</th>
+							      <th scope="col">NATIONALITY</th>
+						
 							    </tr>
 							  </thead>
 							  <tbody>
-							   <c:forEach var = "a" items = "${plane}">
+							   <c:forEach var = "a" items = "${cus}">
 							    <tr>
-                                <th scope="row">${a.idplane}</th>
-                                <td>${a.departFrom}</td>
-                                <td>${a.destination}</td>
-                                <td>${a.airport}</td>
-                                <td>${a.airline }</td>
-                                <td>${a.flighttime} ${a.times}</td>
-                                <td class="a12">
-                                	<a class="a1" href="admin/ticket/${a.idplane}.htm?linkInsert" class="delete_tour">
-                                		<img src="http://localhost:8080/PTITHCM/img/icon/icon-card/plus-square.svg" alt="">									</a>
-                                	<a class="a1" href="admin/update/${a.idplane }.htm?linkEdit" class="edit_tour">
-										<img src="http://localhost:8080/PTITHCM/img/icon/icon-card/pencil-square.svg" alt="">	
-									</a>
-									<a class="a1" href="admin/index/${a.idplane}.htm?linkDelete" class="edit_tour">
-										<img src="http://localhost:8080/PTITHCM/img/icon/icon-card/x-square.svg" alt="">	
-									</a>
-                                </td>
+                                <th scope="row">${a.idcard}</th>
+                                <td>${a.fullname}</td>
+                                <td>${a.email}</td>
+                                <td>0${a.telephone}</td>
+                                <td>${a.birthday }</td>
+                                <td>${a.nationality}</td>
 							    </tr>
 							  </c:forEach>
 							  </tbody>
@@ -155,19 +142,6 @@
 	    	</div>
 
 <script src="http://localhost:8080/PTITHCM/accets/admin_site.js"></script>
-<script>
-	var SuvMenu = document.querySelector(".user_info--user");
-	openSuvMenu = document.querySelector(".user--subnav");
-	
-	
-	SuvMenu.onclick = function(){
-	    if(openSuvMenu.style.display == "block"){
-	        openSuvMenu.style.display = "none";
-	    }
-	    else{
-	        openSuvMenu.style.display = "block";
-	    }
-	};
-</script>
+
 </body>
 </html>
