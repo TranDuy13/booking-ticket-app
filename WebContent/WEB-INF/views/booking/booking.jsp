@@ -28,8 +28,10 @@
             <div class="btn--cancel user_info--user user_info--user2">
                 
                     <i class="ti-shift-left-alt"></i>
-                   
-                <span class="user_name ">HỦY</span>
+    <a href="searchTicket.htm">
+    	<span class="user_name ">Cancel</span>
+    </a>               
+
                 
             </div>
         </div>
@@ -110,7 +112,7 @@
                                             <div class="name">Identity card number</div>
                                             <div class="value">
                                                 <div class="input-group">
-                                                    <input class="input--style-5" type="number" name="ids"/>
+                                                    <input class="input--style-5" type="number" name="ids" max="99999999"/>
                                                     <label class="label--desc">CMND/CCCD</label>
                                                 </div>
                                             </div>

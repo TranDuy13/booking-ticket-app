@@ -178,7 +178,7 @@
                                     <div class="offer__item--cupon">
                                         <p>Cupon: <b>DHSHJAB09D</b></p>
                                     </div>
-                                    <a href="booking.htm">
+                                    <a href="searchTicket.htm">
                                     	<div class="btn-book">Book Now</div>
                                     </a>
                                     
@@ -204,7 +204,7 @@
                                     <div class="offer__item--cupon">
                                         <p>Cupon: <b>DHSHJAB09D</b></p>
                                     </div>
-                                       <a href="booking.htm">
+                                       <a href="searchTicket.htm">
                                     	<div class="btn-book">Book Now</div>
                                     </a>
                                     
@@ -229,7 +229,7 @@
                                     <div class="offer__item--cupon">
                                         <p>Cupon: <b>DHSHJAB09D</b></p>
                                     </div>
-                                      <a href="booking.htm">
+                                      <a href="searchTicket.htm">
                                     	<div class="btn-book">Book Now</div>
                                     </a>
                                     
@@ -263,208 +263,7 @@
                     </div>
                 </div>
                 <div class="over_wrap">
-                    <!-- <div class="best_offer">
-                        <h3 class="best_offer--title">
-                            Best Offer
-                        </h3>
-                        <div class="list__best_offer">
-                            ====================ITEMS==================
-                            <div class="best_offer--item">
-                                <div class="best_offer--item-img">
-                                    <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/bamboo.webp" alt="">
-                                </div>
-                                <h4 class="best_offer--item-name">
-                                    TP HCM - SGN
-                                </h4>
-                                <p class="best_offer--GioKhoihanh">
-                                    14:05
-                                </p>
-                                <div class="decorator">
-                                    <div class="decorator_round" style="background-color: black;">
 
-                                    </div>
-                                    <div class="decorator_line">
-                                        <div class="decorator__Hanghangkhong">
-                                            <span style="color: #73b860">
-                                                Bamboo
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="decorator_round">
-
-                                    </div>
-                                </div>
-                                <h4 class="best_offer--item-name">
-                                    DA NANG - DND
-                                </h4>
-                                <p class="best_offer-cost">$546</p>
-                                <p class="best_offer--date">15 Aug - 22 Aug</p>
-                                <div class="best_offer-btn">
-                                 <a href="booking.htm">
-                                    	<p>Book Now</p>
-                                   </a>
-                                    <i class="ti-angle-double-right"></i>
-                                </div>
-                            </div>
-                            ==============================================
-                            ====================ITEMS==================
-                            <div class="best_offer--item">
-                                <div class="best_offer--item-img">
-                                    <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/vienamairline.webp" alt="">
-                                </div>
-                                <h4 class="best_offer--item-name">
-                                    TP HCM - SGN
-                                </h4>
-                                <p class="best_offer--GioKhoihanh">
-                                    15:00
-                                </p>
-                                <div class="decorator">
-                                    <div class="decorator_round" style="background-color: black;">
-
-                                    </div>
-                                    <div class="decorator_line">
-                                        <div class="decorator__Hanghangkhong">
-                                            <span style="color: #d8b05f">
-                                                VNA
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="decorator_round">
-
-                                    </div>
-                                </div>
-                                <h4 class="best_offer--item-name">
-                                    DA LAT - DLI
-                                </h4>
-                                <p class="best_offer-cost">$546</p>
-                                <p class="best_offer--date">15 Aug - 22 Aug</p>
-                                <div class="best_offer-btn">
-    								 <a href="booking.htm">
-                                    	<p>Book Now</p>
-                                   </a>
-                                    <i class="ti-angle-double-right"></i>
-                                </div>
-                            </div>
-                            ==============================================
-                            ====================ITEMS==================
-                            <div class="best_offer--item">
-                                <div class="best_offer--item-img">
-                                    <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/bamboo.webp" alt="">
-                                </div>
-                                <h4 class="best_offer--item-name">
-                                    HA NOI - HAN
-                                </h4>
-                                <p class="best_offer--GioKhoihanh">
-                                    17:30
-                                </p>
-                                <div class="decorator">
-                                    <div class="decorator_round" style="background-color: black;">
-
-                                    </div>
-                                    <div class="decorator_line">
-                                        <div class="decorator__Hanghangkhong">
-                                            <span style="color: #73b860">
-                                                Bamboo
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="decorator_round">
-                                        
-                                    </div>
-                                </div>
-                                <h4 class="best_offer--item-name">
-                                    DA NANG - DNA
-                                </h4>
-                                <p class="best_offer-cost">$800</p>
-                                <p class="best_offer--date">15 Aug - 22 Aug</p>
-                                <div class="best_offer-btn">
-    								 <a href="booking.htm">
-                                    	<p>Book Now</p>
-                                   </a>
-                                    <i class="ti-angle-double-right"></i>
-                                </div>
-                            </div>
-                            ==============================================
-                           ====================ITEMS==================
-                           <div class="best_offer--item">
-                            <div class="best_offer--item-img">
-                                <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/vietjet.webp">
-                            </div>
-                            <h4 class="best_offer--item-name">
-                                TP HCM - SGN
-                            </h4>
-                            <p class="best_offer--GioKhoihanh">
-                                20:00
-                            </p>
-                            <div class="decorator">
-                                <div class="decorator_round" style="background-color: black;">
-
-                                </div>
-                                <div class="decorator_line">
-                                    <div class="decorator__Hanghangkhong">
-                                        <span style="color: red">
-                                            Vietjet
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="decorator_round">
-
-                                </div>
-                            </div>
-                            <h4 class="best_offer--item-name">
-                                VINH - VII
-                            </h4>
-                            <p class="best_offer-cost">$546</p>
-                            <p class="best_offer--date">15 Aug - 22 Aug</p>
-                            <div class="best_offer-btn">
-    								 <a href="booking.htm">
-                                    	<p>Book Now</p>
-                                   </a>
-                                <i class="ti-angle-double-right"></i>
-                            </div>
-                        </div>
-                        ==============================================
-                            ====================ITEMS==================
-                            <div class="best_offer--item">
-                                <div class="best_offer--item-img">
-                                    <img src="http://localhost:8080/PTITHCM/img/Logo_HangHangKhong/vienamairline.webp" alt="">
-                                </div>
-                                <h4 class="best_offer--item-name">
-                                    VINH - VII
-                                </h4>
-                                <p class="best_offer--GioKhoihanh">
-                                    22:00
-                                </p>
-                                <div class="decorator">
-                                    <div class="decorator_round" style="background-color: black;">
-
-                                    </div>
-                                    <div class="decorator_line">
-                                        <div class="decorator__Hanghangkhong">
-                                            <span style="color: #d8b05f">
-                                                VNA
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="decorator_round">
-
-                                    </div>
-                                </div>
-                                <h4 class="best_offer--item-name">
-                                    DA NANG - DNA
-                                </h4>
-                                <p class="best_offer-cost">$546</p>
-                                <p class="best_offer--date">15 Aug - 22 Aug</p>
-                                <div class="best_offer-btn">
-    								 <a href="booking.htm">
-                                    	<p>Book Now</p>
-                                   </a>
-                                    <i class="ti-angle-double-right"></i>
-                                </div>
-                            </div>
-                            ==============================================
-                        </div>
-                    </div> -->
 
                     <div class="deals">
                         <div class="deals-container">
@@ -475,7 +274,7 @@
                                     <span>STATING AT</span>
                                 </div>
                             </div>
-                            <a href="booking.htm">
+                            <a href="searchTicket.htm">
                                 <div style="margin-right: 60px" class="deal--btn">
                                     BOOK NOW
                                 </div>
