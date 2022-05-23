@@ -49,7 +49,7 @@ public class SearchController {
 		List<TicketEntity> list = this.getPlanes(des, dep, type, stt, date1);
 		
 		int n = list.size();
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i <n; i++) {
 				if(list.get(0).getPlane().getIdplane().equals(list.get(i).getPlane().getIdplane())){
 					
 					list.remove(i);

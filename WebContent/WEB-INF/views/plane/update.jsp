@@ -96,50 +96,61 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-row">
-                                                <div class="name">FROM</div>
-                                                <div class="value">
-                                                    <div class="input-group">
-                                                 <select name="departFrom">
-				                                    <option>DAK LAK</option>
-				                                    <option>NGHE AN</option>
-				                                    <option>HA NOI</option>
-				                                    <option>HAN QUOC</option>
-				                                    <option>PHU QUOC</option>
-				                                    <option>QUANG BINH</option>
-				                                    <option>DA LAT</option>  
-				                                    <option>DA NANG</option> 
-				                                    <option>KHANH HOA</option> 
-				                                    <option>HO CHI MINH</option>
-				                                    <option>CAN THO</option>
-				                                    <option>KON TUM</option>
-				                                </select>
-                                                        <label class="label--desc">FROM</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="name">TO</div>
-                                                <div class="value">
-                                                    <div class="input-group">
-                                                <select name="destination">
-				                                    <option>DAK LAK</option>
-				                                    <option>NGHE AN</option>
-				                                    <option>HA NOI</option>
-				                                    <option>HAN QUOC</option>
-				                                    <option>PHU QUOC</option>
-				                                    <option>QUANG BINH</option>
-				                                    <option>DA LAT</option>  
-				                                    <option>HO CHI MINH</option>
-				                                    <option>DA NANG</option> 
-				                                    <option>KHANH HOA</option> 
-				                                    <option>CAN THO</option>
-				                                    <option>KON TUM</option>
-				                                </select>
-                                                        <label class="label--desc">TO</label>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
+                                           <div class="form-row m-b-55">
+				                            	<div class="name">FROM</div>
+				                            	<div class="value">
+				                                <div class="row row-space">
+				                                    <div class="col-2">
+				                                        <div class="input-group-desc">
+				                                            <div class="value">
+				                                                    <div class="input-group">
+								                                <select name="departFrom">
+								                                    <option>DAK LAK</option>
+								                                    <option>NGHE AN</option>
+								                                    <option>HA NOI</option>
+								                                    <option>HAN QUOC</option>
+								                                    <option>PHU QUOC</option>
+								                                    <option>QUANG BINH</option>
+								                                    <option>DA LAT</option>  
+								                                    <option>DA NANG</option> 
+								                                    <option>KHANH HOA</option> 
+								                                    <option>CAN THO</option>
+								                                    <option>HO CHI MINH</option>
+								                                    <option>KON TUM</option>
+								                                </select>
+				                                                        <label class="label--desc">FROM</label>
+				                                                    </div>
+				                                                </div>
+				                                        </div>
+				                                    </div>
+				                                    <div class="col-2">
+				                                        <div class="input-group-desc">
+				                                            <div class="value">
+				                                                    <div class="input-group">
+				                                              <select name="destination">
+								                                    <option>DAK LAK</option>
+								                                    <option>NGHE AN</option>
+								                                    <option>HA NOI</option>
+								                                    <option>HAN QUOC</option>
+								                                    <option>PHU QUOC</option>
+								                                    <option>QUANG BINH</option>
+								                                    <option>DA LAT</option>  
+								                                    <option>DA NANG</option> 
+								                                    <option>KHANH HOA</option> 
+								                                    <option>HO CHI MINH</option>
+								                                    <option>CAN THO</option>
+								                                    <option>KON TUM</option>
+								                                </select>
+				                                                   
+				                                                        <label class="label--desc">TO</label>
+				                                                    </div>
+				                                                </div>
+				                                        </div>
+				                                    </div>
+				                                </div>
+				                            </div>
+				                        </div>
                                             <div class="form-row">
                                                 <div class="name">AIRPORT</div>
                                                 <div class="value">

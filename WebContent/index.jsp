@@ -51,7 +51,7 @@
                                 <span>Booking</span>
                             </li>
                         </a>
-                        <a href="" class="Support_link">
+                        <a href="spt.htm" class="Support_link">
                             <li>
                                 <div class="img"><img src="http://localhost:8080/PTITHCM/img/icon/icon-navbar/Icon-Support-Fill.svg" alt="">
                                     </div>
@@ -101,51 +101,7 @@
                 </div>
 
                 <div class="search_flights">
-                    <!-- <div class="places">
-                        <div class="from">
-                            <div class="places__title">
-                                <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-Location-Placeholder.png" alt="" class="icon">
-                                <p>FROM</p>
-                            </div>
-                                <span class="text">Dhaka, Bangladesh</span>
-                                <select name="Danhsachsanbay">
-                                    <option>Dhaka, Bangladesh</option>
-                                    <option>Delhi, Toronto, Mexico</option>
-                                    <option>Chennai, Mumbai</option>
-                                    <option>Mumbai, Bangalore, Pune</option>
-                                    <option>Pune, Mumbai, Kolkata</option>
-                                        
-                                </select>
-                                    
-        
-                        </div>
-
-                        <div class="to">
-                            <div class="places__title">
-                                <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-Location-Placeholder.png" alt="" class="icon">
-                                <p>T0</p>
-                            </div>
-                            <select name="Danhsachsanbay">
-                                <option>Dhaka, Bangladesh</option>
-                                <option>Delhi, Toronto, Mexico</option>
-                                <option>Chennai, Mumbai</option>
-                                <option>Mumbai, Bangalore, Pune</option>
-                                <option>Pune, Mumbai, Kolkata</option>
-                                    
-                            </select>
-                        </div>
-                        <div class="class">
-                            <div class="places__title">
-                                <img src="http://localhost:8080/PTITHCM/img/icon/icon-flight_search/Icon-class-Seat.png" alt="" class="icon">
-                                <p>CLASS</p>
-                            </div>
-                            <select name="class_flight" id="">
-                                <option>Eco</option>
-                                <option>Business</option>
-                            </select>
-                            <p>Business</p>
-                        </div>
-                    </div> -->
+                    
                     <div class="flight_date">
                         <div class="select_date">
                             <div class="places__title">

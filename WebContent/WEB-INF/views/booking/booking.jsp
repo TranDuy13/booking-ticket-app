@@ -11,11 +11,11 @@
     <link href="http://localhost:8080/PTITHCM/accets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="http://localhost:8080/PTITHCM/accets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/1/14570d0f2b738b8dc8ef903949bce73c.svg">
-    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/a.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="http://localhost:8080/PTITHCM/fonts/themify-icons/themify-icons.css">
+
 <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/login.css">
 <!-- Font awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -42,13 +42,13 @@
                         
                             <!-- ====================ITEMS================== -->
                             <div class="best_offer--item">
-                                <div class="decorator_line">
+                               
                                         <div class="decorator__Hanghangkhong">
-                                            <span style="color: #73b860">
+                                            <div class="setColor2">
                                                 ${ticketss.plane.airline }
-                                            </span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    
                                 <h4 class="best_offer--item-name">
                                     ${ticketss.plane.departFrom}
                                 </h4>
@@ -59,9 +59,11 @@
                                     <div class="decorator_round" style="background-color: black;">
 
                                     </div>
-                                    
+                                    <div class="decorator_line">
+                                        
+                                    	</div>
                                     <div class="decorator_round">
-
+										
                                     </div>
                                 </div>
                                 <h4 class="best_offer--item-name">
@@ -143,7 +145,7 @@
                                                     <span class="checkmark"></span>
                                                 </label>
                                                 <label>
-                                                    <img src="http://localhost:8080/PTITHCM/img/momos.jpg" alt="QR CODE">
+                                                    <img style="width: 170px" src="http://localhost:8080/PTITHCM/img/momo.png" alt="QR CODE">
                                                 </label>
                                             </div>
                                         </div>
@@ -161,15 +163,12 @@
         </div>
     </div>
 
-<!-- React js -->
+
 
     <script src="http://localhost:8080/PTITHCM/accets/FormBooking.js"></script>
+     <script src="http://localhost:8080/PTITHCM/accets/setColor.js"></script>
     
-    <!-- ... other HTML ... -->
-
-  <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  
+   
   
 
 </body>

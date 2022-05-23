@@ -82,7 +82,10 @@
             </div>
             <div class="container">
 
-				<div class="over_wrap" style="padding-left: 60px; padding-bottom: 30px;">	
+				<div class="over_wrap" style="padding-top: 120px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+    padding-right: 40px;">	
 				  
 	<form action="detail.htm" method="post">		  		
 		<div class="modal__inner">
@@ -130,7 +133,7 @@
                 <div class="ticked__footer">
                    
                 </div>
-              <button type ="submit">CONTINUE</button>
+              <button style="position: absolute ;bottom: 0;right: 20px;" class="btn" type ="submit">CONTINUE</button>
 
             </div>
 </form>

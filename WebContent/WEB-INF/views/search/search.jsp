@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLIGHTS</title>
     <link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/1/14570d0f2b738b8dc8ef903949bce73c.svg">
-    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/searchFlight.css">
+    <link rel="stylesheet" href="http://localhost:8080/PTITHCM/accets/search.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
                                 <span>Booking</span>
                             </li>
                         </a>
-                        <a href="" class="Support_link">
+                        <a href="spt.htm" class="Support_link">
                             <li>
                                 <div class="img"><img src="./img/icon/icon-navbar/Icon-Support-Fill.svg" alt="">
                                     </div>
@@ -88,7 +88,6 @@
                                 <img src="./img/icon/icon-flight_search/Icon-Location-Placeholder.png" alt="" class="icon">
                                 <p>FROM</p>
                             </div>
-                              `
                                                 <select name="departFrom">
 				                                    <option>DAK LAK</option>
 				                                    <option>NGHE AN</option>
@@ -162,9 +161,9 @@
 						<div class="list__best_offer">
 							<!-- ====================ITEMS================== -->
 							<c:forEach var = "a" items = "${ticketsss}">
-							<div class="best_offer--item">
-								<div class="best_offer--item-img">
-									<img src="./img/Logo_HangHangKhong/bamboo.webp" alt="">
+							<div class="best_offer--items">
+								<div class="best_offer--item-nameflight">
+									<div class="setColor">${a.plane.airline}</div>
 								</div>
 								<h4 class="best_offer--item-name">${a.plane.departFrom}</h4>
 								<p class="best_offer--GioKhoihanh">${a.plane.times}</p>
@@ -174,7 +173,7 @@
 									</div>
 									<div class="decorator_line">
 										<div class="decorator__Hanghangkhong">
-											<span style="color: #73b860"> ${a.plane.airline } </span>
+											
 										</div>
 									</div>
 									<div class="decorator_round"></div>
@@ -238,21 +237,11 @@
         </div>
     </div>
 
-<!-- React js -->
-<div id="like_button_container">
 
-</div>
+
 
     <script src="./accets/login.js"></script>
-    <!-- ... other HTML ... -->
-
-  <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-
-  <!-- Load our React component. -->
-  <script src="like_button.js"></script>
+ 	<script src="http://localhost:8080/PTITHCM/accets/setColor.js"></script>
   
 
 </body>

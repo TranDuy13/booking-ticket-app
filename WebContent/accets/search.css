@@ -490,17 +490,18 @@ ul.nav_bar--list li {
     height: 490px;
 }
 
-.best_offer--item {
+.best_offer--items {
     display: flex;
     justify-content: flex-start;
-    height: 75.5px;
     width: 1010px;
     font-size: 18px;
     font-weight: 700;
     border-bottom: 1px solid #C1C4D0;
-    line-height: 52px;
+    padding-top: 16px;
 }
-
+.setColor{
+	width: 190px;
+}
 
 
 .best_offer--item-name {
@@ -519,10 +520,10 @@ ul.nav_bar--list li {
 
 .best_offer-btn {
     padding-left: 11px;
-    height: 52px;
+    height: 30px;
     border-radius: 40px;
     display: flex;
-    width: 152px;
+    width: 135px;
     justify-content: space-evenly;
     align-items: baseline;
 }
@@ -647,8 +648,8 @@ ul.nav_bar--list li {
 }
 .decorator{
     display: flex;
-    padding-top: 20px;
-    margin: 0 5px;
+    padding-top: 6px;
+    margin: 0 20px;
 }
 .best_offer--item-img{
     padding-top: 12px;

@@ -1,3 +1,5 @@
+
+
 var Booking = document.querySelectorAll(".best_offer-btn"); 
 
 for (let i = 0; i < Booking.length; i++) {
